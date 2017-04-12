@@ -1,8 +1,9 @@
 /* CSS declarations go here */
 body{
-	background-color: pink;
+	background-color: white;
+	padding-left: 2em;
 }
 
 h1{
-	color: white;
+	
 }
