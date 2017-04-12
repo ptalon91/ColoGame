@@ -1,9 +1,13 @@
 /* CSS declarations go here */
 body{
+<<<<<<< Updated upstream
 
 	background-color: pink;
 
 >>>>>>> origin/master
+=======
+	background-color: pink;
+>>>>>>> Stashed changes
 }
 h1{
 	color: white;
