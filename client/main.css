@@ -1,54 +1,26 @@
 /* CSS declarations go here */
 body{
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-	background-color: lightblue;
-=======
-	background-color: pink;
->>>>>>> parent of f7128ff... Merge remote-tracking branch 'origin/master'
+	background-color: white;
+	padding-left: 2em;
 }
 
 h1{
 	color: white;
-<<<<<<< HEAD
 	text-align: center;
 }
 
 p{
 	text-align: left;
-=======
 	background-color: white;
 	padding-left: 2em;
 }
 
-=======
-	background-color: white;
-	padding-left: 2em;
-}
-
->>>>>>> origin/master
-=======
-	background-color: white;
-	padding-left: 2em;
-}
-
->>>>>>> origin/master
 label{
 	display: inline-block;
 	min-width: 200px;
 	color: blue;
 }
+
 #boutton_validation{
 	margin-left: 255px;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/master
-=======
->>>>>>> origin/master
-=======
->>>>>>> origin/master
-=======
->>>>>>> parent of f7128ff... Merge remote-tracking branch 'origin/master'
 }
