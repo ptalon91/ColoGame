@@ -2,6 +2,7 @@
 body{
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	background-color: lightblue;
 }
 
@@ -23,6 +24,12 @@ p{
 }
 
 >>>>>>> origin/master
+=======
+	background-color: white;
+	padding-left: 2em;
+}
+
+>>>>>>> origin/master
 label{
 	display: inline-block;
 	min-width: 200px;
@@ -31,6 +38,9 @@ label{
 #boutton_validation{
 	margin-left: 255px;
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
 =======
 >>>>>>> origin/master

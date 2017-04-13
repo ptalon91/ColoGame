@@ -36,6 +36,7 @@ Je pense que c'est plus facile de tout faire en anglais pour l'instant -->
       var pseudo_v = /^[a-zA-Zéèîï0-9][a-zéèçîï0-9]+([-'\s][a-zA-Zéèîï0-9][a-zéèçîï0-9]+)?/;  //pour valider le pseudo
       var mail_v = /^[a-zA-Z0-9][a-z0-9]+([@][a-zA-Zéèîï][a-zéèçîï]+)/
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       validation.addEventListener('click', f_valid);
 
@@ -87,6 +88,31 @@ Je pense que c'est plus facile de tout faire en anglais pour l'instant -->
 </body>
 
 >>>>>>> origin/master
+=======
+
+      validation.addEventListener('click', f_valid);
+
+      function f_valid(e){      //fonction de validation du pseudo
+        if(pseudo.validity.valueMissing){
+          e.preventDefault();
+          pseudo_m.textContent = 'Pseudo manquant';
+          pseudo_m.style.color = 'red';
+        }else if(pseudo_v.test(pseudo.value)==false){
+          event.preventDefault();
+          pseudo_m.textContent = 'Format incorrect';
+          pseudo_m.style.color = 'red';
+        }else if(mail.validity.valueMissing){
+          e.preventDefault();
+          mail_m.textContent = 'e-mail manquant';
+          mail_m.style.color = 'red';
+        }
+      } 
+
+    </script>
+  </form>
+</body>
+
+>>>>>>> origin/master
 <!--<template name="hello">
   <button>Click Me</button>
   <p>You've pressed the button {{counter}} times.</p>
@@ -101,6 +127,7 @@ Je pense que c'est plus facile de tout faire en anglais pour l'instant -->
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <template name="info">
   <div class="container">
     <div class="jumbotron">
@@ -111,6 +138,8 @@ Je pense que c'est plus facile de tout faire en anglais pour l'instant -->
   </div>
 </template>
 =======
+=======
+>>>>>>> origin/master
 =======
 >>>>>>> origin/master
 <!--<template name="info">
@@ -124,6 +153,10 @@ Je pense que c'est plus facile de tout faire en anglais pour l'instant -->
   {{> loginButtons}}
 </template>-->
 <<<<<<< HEAD
+<<<<<<< HEAD
+	
+>>>>>>> origin/master
+=======
 	
 >>>>>>> origin/master
 =======
