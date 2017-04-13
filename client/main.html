@@ -3,26 +3,17 @@
 </head>
 
 <body>
-<<<<<<< Updated upstream
   <div class="page-header text-center">
     <h1>ColoGame</h1>
     <h3>Manage your flatshare with fun!</h3>
-    {{> loginButtons}}
   </div>
   <!--{{> hello 2}}-->
-=======
-	<div class="page-header text-center">
-		<h1>ColoGame</h1>
-		<h3>Manage your flatshare with fun!</h3>
-	</div>
-	<!--{{> hello 2}}-->
->>>>>>> Stashed changes
 
 <!-- <a href="creatAccount.html">Create an account</a> -->
 <!--page de création de compte-->
 <form action="post">
     <label for="pseudo">Entrez votre pseudo :</label>
-    <input type="text" name="pseudo" id="pseudo" required="required" maxlength="20">
+    <input type="pseudo" name="pseudo" id="pseudo" required="required" maxlength="20">
     <span id="pseudo_manquant"></span><br>
     
     <label for="password">Entrez un mot de passe :</label>
@@ -41,18 +32,10 @@
       var pseudo_m = document.getElementById('pseudo_manquant');
       var mail_m = document.getElementById('mail_manquant');
       var pseudo_v = /^[a-zA-Zéèîï0-9][a-zéèçîï0-9]+([-'\s][a-zA-Zéèîï0-9][a-zéèçîï0-9]+)?/;  //pour valider le pseudo
-<<<<<<< Updated upstream
       var mail_v = /^[a-zA-Z0-9][a-z0-9]+([@][a-zA-Zéèîï][a-zéèçîï]+)/
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      var mail_v = /^[a-zA-Z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$/
->>>>>>> Stashed changes
 
->>>>>>> Stashed changes
       validation.addEventListener('click', f_valid);
+
       function f_valid(e){      //fonction de validation du pseudo
         if(pseudo.validity.valueMissing){
           e.preventDefault();
@@ -62,16 +45,13 @@
           event.preventDefault();
           pseudo_m.textContent = 'Format incorrect';
           pseudo_m.style.color = 'red';
-        }
-        else if(mail.validity.valueMissing){
+        }else if(mail.validity.valueMissing){
           e.preventDefault();
           mail_m.textContent = 'e-mail manquant';
           mail_m.style.color = 'red';
-        }else if(mail_v.test(mail.value)==false){
-          event.preventDefault();
-          mail_m.textContent = 'Format incorrect';
-          mail_m.style.color = 'red';
+        }
       } 
+
     </script>
   </form>
 </body>
@@ -100,3 +80,4 @@
   </ul>
   {{> loginButtons}}
 </template>-->
+  
