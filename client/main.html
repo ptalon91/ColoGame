@@ -1,15 +1,14 @@
-<!-- ColoGame v0.1
-Je pense que c'est plus facile de tout faire en anglais pour l'instant -->
 <head>
   <title>ColoGame</title>
 </head>
+
 <body>
-	<div class="page-header text-center">
-		<h1>ColoGame</h1>
-		<h3>Manage your flatshare with fun!</h3>
+  <div class="page-header text-center">
+    <h1>ColoGame</h1>
+    <h3>Manage your flatshare with fun!</h3>
     {{> loginButtons}}
-	</div>
-	<!--{{> hello 2}}-->
+  </div>
+  <!--{{> hello 2}}-->
 
 <!-- <a href="creatAccount.html">Create an account</a> -->
 <!--page de création de compte-->
@@ -35,11 +34,7 @@ Je pense que c'est plus facile de tout faire en anglais pour l'instant -->
       var mail_m = document.getElementById('mail_manquant');
       var pseudo_v = /^[a-zA-Zéèîï0-9][a-zéèçîï0-9]+([-'\s][a-zA-Zéèîï0-9][a-zéèçîï0-9]+)?/;  //pour valider le pseudo
       var mail_v = /^[a-zA-Z0-9][a-z0-9]+([@][a-zA-Zéèîï][a-zéèçîï]+)/
-<<<<<<< HEAD
-<<<<<<< HEAD
-
       validation.addEventListener('click', f_valid);
-
       function f_valid(e){      //fonction de validation du pseudo
         if(pseudo.validity.valueMissing){
           e.preventDefault();
@@ -55,93 +50,24 @@ Je pense que c'est plus facile de tout faire en anglais pour l'instant -->
           mail_m.style.color = 'red';
         }
       } 
-
-    </script>
-  </form>
-</body>
-<<<<<<< HEAD
-<template name="hello">
-=======
-
-=======
-
-      validation.addEventListener('click', f_valid);
-
-      function f_valid(e){      //fonction de validation du pseudo
-        if(pseudo.validity.valueMissing){
-          e.preventDefault();
-          pseudo_m.textContent = 'Pseudo manquant';
-          pseudo_m.style.color = 'red';
-        }else if(pseudo_v.test(pseudo.value)==false){
-          event.preventDefault();
-          pseudo_m.textContent = 'Format incorrect';
-          pseudo_m.style.color = 'red';
-        }else if(mail.validity.valueMissing){
-          e.preventDefault();
-          mail_m.textContent = 'e-mail manquant';
-          mail_m.style.color = 'red';
-        }
-      } 
-
     </script>
   </form>
 </body>
 
->>>>>>> origin/master
-=======
-
-      validation.addEventListener('click', f_valid);
-
-      function f_valid(e){      //fonction de validation du pseudo
-        if(pseudo.validity.valueMissing){
-          e.preventDefault();
-          pseudo_m.textContent = 'Pseudo manquant';
-          pseudo_m.style.color = 'red';
-        }else if(pseudo_v.test(pseudo.value)==false){
-          event.preventDefault();
-          pseudo_m.textContent = 'Format incorrect';
-          pseudo_m.style.color = 'red';
-        }else if(mail.validity.valueMissing){
-          e.preventDefault();
-          mail_m.textContent = 'e-mail manquant';
-          mail_m.style.color = 'red';
-        }
-      } 
-
-    </script>
-  </form>
-</body>
-
->>>>>>> origin/master
 <!--<template name="hello">
   <button>Click Me</button>
   <p>You've pressed the button {{counter}} times.</p>
->>>>>>> origin/master
   <div class="container">
     <div class="jumbotron">
-      <h1>Welcome to ColoGame</h1>
-      <p>An application that makes the household tasks in colocation more playful. The principle is to earn points by carrying out the daily tasks. These points will allow each player to distribute wages to other players.</p>
+      <h1>Bootstrap Tutorial</h1>
+      <p>Bootstrap is the most popular HTML, CSS, and JS framework for developing
+      responsive, mobile-first projects on the web.</p>
     </div>
+    <p>This is some text.</p>
+    <p>This is another text.</p>
   </div>
 </template>-->
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<template name="info">
-  <div class="container">
-    <div class="jumbotron">
-      <p>Create an account or sign in</p>
-  {{> loginButtons}}
-
-    </div>
-  </div>
-</template>
-=======
-=======
->>>>>>> origin/master
-=======
->>>>>>> origin/master
 <!--<template name="info">
   <h2>Learn Meteor!</h2>
   <ul>
@@ -152,13 +78,3 @@ Je pense que c'est plus facile de tout faire en anglais pour l'instant -->
   </ul>
   {{> loginButtons}}
 </template>-->
-<<<<<<< HEAD
-<<<<<<< HEAD
-	
->>>>>>> origin/master
-=======
-	
->>>>>>> origin/master
-=======
-	
->>>>>>> origin/master
