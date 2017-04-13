@@ -1,8 +1,37 @@
 /* CSS declarations go here */
 body{
-	background-color: pink;
+<<<<<<< HEAD
+<<<<<<< HEAD
+	background-color: lightblue;
 }
 
 h1{
 	color: white;
+	text-align: center;
+}
+
+p{
+	text-align: left;
+=======
+	background-color: white;
+	padding-left: 2em;
+}
+
+=======
+	background-color: white;
+	padding-left: 2em;
+}
+
+>>>>>>> origin/master
+label{
+	display: inline-block;
+	min-width: 200px;
+	color: blue;
+}
+#boutton_validation{
+	margin-left: 255px;
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
+>>>>>>> origin/master
 }
