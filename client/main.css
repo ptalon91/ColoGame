@@ -4,6 +4,11 @@ body{
 	padding-left: 2em;
 }
 
-h1{
-	
+label{
+	display: inline-block;
+	min-width: 200px;
+	color: blue;
+}
+#boutton_validation{
+	margin-left: 255px;
 }
