@@ -7,53 +7,10 @@
     <h1>ColoGame</h1>
     <h3>Manage your flatshare with fun!</h3>
   </div>
-  <!--{{> hello 2}}-->
+  <div class="text-center">
+    {{> mainLogin}}
+  </div>
 
-<!-- <a href="creatAccount.html">Create an account</a> -->
-<!--page de création de compte-->
-<form action="post">
-    <label for="pseudo">Entrez votre pseudo :</label>
-    <input type="pseudo" name="pseudo" id="pseudo" required="required" maxlength="20">
-    <span id="pseudo_manquant"></span><br>
-    
-    <label for="password">Entrez un mot de passe :</label>
-    <input type="password" name="password" id="password" required="required"><br>
-    
-    <label for="mail">Entrez votre adresse mail :</label>
-    <input type="emal" name="mail" id="mail" required="required">
-    <span id="mail_manquant"></span><br>
-
-    <input type="submit" value="valider" id="boutton_validation">
-
-    <script>
-      var validation = document.getElementById('boutton_validation');
-      var pseudo = document.getElementById('pseudo');
-      var mail = document.getElementById('mail');
-      var pseudo_m = document.getElementById('pseudo_manquant');
-      var mail_m = document.getElementById('mail_manquant');
-      var pseudo_v = /^[a-zA-Zéèîï0-9][a-zéèçîï0-9]+([-'\s][a-zA-Zéèîï0-9][a-zéèçîï0-9]+)?/;  //pour valider le pseudo
-      var mail_v = /^[a-zA-Z0-9][a-z0-9]+([@][a-zA-Zéèîï][a-zéèçîï]+)/
-
-      validation.addEventListener('click', f_valid);
-
-      function f_valid(e){      //fonction de validation du pseudo
-        if(pseudo.validity.valueMissing){
-          e.preventDefault();
-          pseudo_m.textContent = 'Pseudo manquant';
-          pseudo_m.style.color = 'red';
-        }else if(pseudo_v.test(pseudo.value)==false){
-          event.preventDefault();
-          pseudo_m.textContent = 'Format incorrect';
-          pseudo_m.style.color = 'red';
-        }else if(mail.validity.valueMissing){
-          e.preventDefault();
-          mail_m.textContent = 'e-mail manquant';
-          mail_m.style.color = 'red';
-        }
-      } 
-
-    </script>
-  </form>
 </body>
 
 <!--<template name="hello">
