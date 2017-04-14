@@ -24,3 +24,5 @@ accounts-password
 msavin:mongol
 accounts-ui
 iron:router
+minimongo
+underscore
