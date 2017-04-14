@@ -25,3 +25,4 @@ accounts-ui
 iron:router
 minimongo
 underscore
+sacha:spin
