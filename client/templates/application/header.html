@@ -7,9 +7,14 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="{{pathFor 'tasksList'}}">ColoGame - Manage your flatshare with fun</a>
+      <a class="navbar-brand" href="{{pathFor 'homePage'}}">ColoGame - Manage your flatshare with fun</a>
     </div>
     <div class="collapse navbar-collapse" id="navigation">
+      <ul class="nav navbar-nav navbar-right">
+		{{#if currentUser}}
+        	<a href="{{pathFor 'profile'}}"><img class="img-responsive" src="/data/profile_pic.png" width="50" /></a>
+        {{/if}}
+      </ul>
       <ul class="nav navbar-nav navbar-right">
         {{> loginButtons}}
       </ul>

@@ -1,0 +1,14 @@
+<template name="profile">
+	<div class="container">
+		<!-- Image de profil non réactive por l'instant. Faire en sorte qu'elle s'adapte en fonction de l'utilisateur.-->
+		{{#if currentUser}}
+			<img class="img-responsive" src="/data/profile_pic.png" width="200" />
+   			<ul>
+   				<li>Username: {{currentUser.username}}</li>
+   				<li>Points: {{currentUser.points}}</li>
+   			</ul>
+   		{{else}}
+			<div class="jumbotron">Please sign in to see your profile.</div>
+		{{/if}}
+	</div>
+</template>
