@@ -1,9 +1,11 @@
 <template name="profile">
 	<div class="container">
-		<!-- Image de profil non réactive por l'instant. Faire en sorte qu'elle s'adapte en fonction de l'utilisateur.-->
+		<!-- Profile image is not reactive yet. It should later be uploaded by the user and be loaded after login.-->
+		<!-- #if currentUser return the current user, allowing to get his own data. -->
 		{{#if currentUser}}
 			<img class="img-responsive" src="/data/profile_pic.png" width="200" />
    			<ul>
+   				<!-- Returns username and points fields of the current user and include into HTML. -->
    				<li>Username: {{currentUser.username}}</li>
    				<li>Points: {{currentUser.points}}</li>
    			</ul>

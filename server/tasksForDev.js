@@ -1,3 +1,5 @@
+// These tasks are created in the tasks database when the server launches, if the database is empty(after a meteor reset for example).
+// Useful for app development.
 if (Tasks.find().count() === 0) {
   Tasks.insert({
     name: 'passer la panosse',

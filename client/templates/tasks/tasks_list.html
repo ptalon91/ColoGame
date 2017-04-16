@@ -1,5 +1,6 @@
 <template name="tasksList">
 	<div class="tasks">
+		<!--For each tasks returned by the helper, use template taskItem.-->
 		{{#each tasks}}
 			{{> taskItem}}
 		{{/each}}
