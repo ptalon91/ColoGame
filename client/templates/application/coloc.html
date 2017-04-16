@@ -1,0 +1,28 @@
+<template name="coloc">
+	<div class="container">
+		<!-- Profile image is not reactive yet. It should later be uploaded by the user and be loaded after login.-->
+		<!-- #if currentUser return the current user, allowing to get his own data. -->
+		{{#if currentUser}}
+			<div class="row">
+				<div class="col-sm-4">
+					<img class="img-responsive img-rounded" src="/data/profile_pic.png" style="margin-left: -1em; max-width: 250px"/>
+					<ul class="list-unstyled">
+		   				<!-- Returns username and points fields of the current user and include into HTML. -->
+		   				<li><h3>{{currentUser.username}}</h3></li>
+		   				<li><h3>{{currentUser.points}} points</h3></li>
+		   			</ul>
+	   			</div>
+		   		<div class="jumbotron col-sm-8 text-center">
+		   			<h4>Notifications, activités de la coloc...</h4>
+		   		</div>
+		   	</div>
+		   	<div class="row">
+		   		<div class="col-sm-4" style="padding-top: 2%">
+		   			<h4>Scores et classement</h4>
+				 	{{>scores}}
+		   		</div>
+		   	</div>
+
+		{{/if}}
+	</div>
+</template>

@@ -4,26 +4,19 @@
 		<!-- #if currentUser return the current user, allowing to get his own data. -->
 		{{#if currentUser}}
 		<div class="row">
-			<div class="col-sm-3">
-				<img class="img-responsive img-rounded" src="/data/profile_pic.png" style="margin-left: -1em;"/>
+			<div class="col-sm-4">
+				<img class="img-responsive img-rounded" src="/data/profile_pic.png" style="margin-left: -1em; max-width: 250px"/>
 				<ul class="list-unstyled">
 	   				<!-- Returns username and points fields of the current user and include into HTML. -->
 	   				<li><h3>{{currentUser.username}}</h3></li>
 	   				<li><h3>{{currentUser.points}} points</h3></li>
 	   			</ul>
    			</div>
-	   		<div class="jumbotron col-sm-9 text-center">
+	   		<div class="jumbotron col-sm-8 text-center">
 	   			<h4>Liste des dernières tâches/gages effectués.</h4>
 	   		</div>
 	   	</div>
-   		{{else}}
-   			<div class="row">
-				<div class="col-sm-12">
-					<div class="jumbotron text-center">
-						<h4>Please sign in to see your profile.</h4>
-					</div>
-				</div>
-			</div>
+
 		{{/if}}
 	</div>
 </template>
