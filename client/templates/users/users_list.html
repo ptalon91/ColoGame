@@ -1,0 +1,8 @@
+<template name="usersList">
+	<div class="users">
+		<!--For each tasks returned by the helper, use template taskItem.-->
+		{{#each users}}
+			{{> userItem}}
+		{{/each}}
+	</div>
+</template>
