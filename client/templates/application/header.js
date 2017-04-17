@@ -5,3 +5,18 @@ Template.header.events({
     }
 });
 
+// Redirect to coloc page after login.
+var requireLogin = function() {
+    if (! Meteor.user()) {
+      if (Meteor.loggingIn()) {
+        Router.go('coloc');
+        this.next();
+      } else {
+        Router.go('homePage');
+        this.next();
+      }
+    } else {
+      this.next();
+    }
+  }
+  Router.onBeforeAction(requireLogin);
