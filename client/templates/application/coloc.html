@@ -3,9 +3,9 @@
 		<!-- Profile image is not reactive yet. It should later be uploaded by the user and be loaded after login.-->
 		<!-- #if currentUser return the current user, allowing to get his own data. -->
 		{{#if currentUser}}
-			<div class="col-sm-4">
+			<div class="col-sm-3">
 				<div class="row">
-					<img class="img-responsive img-rounded" src="/data/profile_pic.png" style="margin-left: -1em; max-width: 250px"/>
+					<img class="img-responsive img-rounded" src="/data/profile_pic.png" style="margin-left: -1em;"/>
 					<ul class="list-unstyled">
 		   				<!-- Returns username and points fields of the current user and include into HTML. -->
 		   				<li><h3>{{currentUser.username}}</h3></li>
@@ -19,7 +19,7 @@
 			   		</div>
 			   	</div>
 			</div>
-	   		<div class="jumbotron col-sm-8 text-center">
+	   		<div class="jumbotron col-sm-9 text-center">
 	   			<h4>Notifications, activités de la coloc...</h4>
 	   		</div>
 

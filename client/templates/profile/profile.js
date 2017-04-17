@@ -1,2 +1,2 @@
 // Subscription to the points field publication.
-Meteor.subscribe('userPoints');
+Meteor.subscribe('userData');
