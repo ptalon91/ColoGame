@@ -1,6 +1,6 @@
-// Helpers for the tasksList template. Returns every tasks from the database and assign it to "tasks"
+// Helpers for the usersList template. Returns every users from the database, and sort it in function of the points.
 Template.usersList.helpers({
 	users: function() {
-		return Meteor.users.find();
+		return Meteor.users.find({}, {sort: {points:-1}});
 	}
 });
