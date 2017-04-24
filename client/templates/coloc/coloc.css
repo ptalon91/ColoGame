@@ -1,6 +1,26 @@
-.jumbotron:hover{
-	background-color: #CDCDCD;
+.notif{
+	width: 60%;
+	height: 100px;
+	text-align: center;
+	margin-left: 35%;
+	border-radius: 15px;
+	background-color: #E7E7E7;
+	transition: 0.5s;
+}
+.notif:hover{
+	background-color: rgba(145, 255, 213, 0.4);
 	box-shadow: 0px 0px 5px black;
 	font-size: 50%;
 	transition: background-color 0.5s, box-shadow 0.5s;
+}
+
+.notifTexte{
+	padding-top: 40px;
+}
+
+#afaire{
+	background-color: rgba(145, 255, 213, 0.4);
+}
+#effetuees{
+	background-color: rgba(255, 000, 000, 0.5);
 }
