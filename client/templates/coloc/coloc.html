@@ -21,7 +21,10 @@
 			   	</div>
 			</div>
 
-			<div class="addTache" id="addTache"><h4 class="addTacheTexte">Ajouter une tâche pour la coloc.</h4></div>
+			<div class="addTache" id="addTache">
+				<h4 class="addTacheTexte" id="h4">Ajouter une tâche pour la coloc.</h4>
+			</div>
+
 			<script>
 				var bouton = document.getElementById('addTache');
 
@@ -38,12 +41,12 @@
 
 					newTache.appendChild(textTache);
 
-					document.body.appendChild(newTache); //insère l'objet en tant que dernier éléments => a la fin
+					//document.body.appendChild(newTache); //insère l'objet en tant que dernier éléments => a la fin
 
-					var derniereNotif = document.getElementById('derniereNotif');
-
+					var derniereNotif = document.getElementById('derniereNotif'); //leo a fait
+					
 					document.body.insertBefore(newTache, derniereNotif);	//pq ne marche pas ??
-				};				
+				};	
 			</script>
 
 	   		<div class="notif" id="derniereNotif">
@@ -61,6 +64,7 @@
 	   		<div class="notif">
 	   			<h4 class="notifTexte">Notifications, activités de la coloc...</h4>
 	   		</div>
+	
 	 <!--  		<div class="jumbotron col-sm-8 text-center pull-right">
 	   			<h4>Notifications, activités de la coloc...</h4>
 	   		</div>
@@ -98,6 +102,6 @@
 	   			<h4>Notifications, activités de la coloc...</h4>
 	   		</div> -->
 
-		{{/if}}
+	{{/if}}
 	</div>
 </template>
