@@ -1,4 +1,3 @@
-
 <template name="coloc">
 	<div class="container">
 		<!-- Profile image is not reactive yet. It should later be uploaded by the user and be loaded after login.-->
@@ -22,8 +21,33 @@
 			   	</div>
 			</div>
 
-	   		<div class="notif">
-	   			<h4 class="notifTexte">Notifications, activités de la coloc...</h4>
+			<div class="addTache" id="addTache"><h4 class="addTacheTexte">Ajouter une tâche pour la coloc.</h4></div>
+			<script>
+				var bouton = document.getElementById('addTache');
+
+				bouton.addEventListener('click', add_tache);
+
+				function add_tache(){
+					var x = prompt('Entrez le nom de la tâche');
+
+					var newTache = document.createElement('div');
+					newTache.id = 'nouvelleTache';
+
+					var textTache = document.createTextNode(x);
+					textTache.innerHTML = '<h4>+x+</h4>';			//comment faire sans utiliser css ?
+
+					newTache.appendChild(textTache);
+
+					document.body.appendChild(newTache); //insère l'objet en tant que dernier éléments => a la fin
+
+					var derniereNotif = document.getElementById('derniereNotif');
+
+					document.body.insertBefore(newTache, derniereNotif);	//pq ne marche pas ??
+				};				
+			</script>
+
+	   		<div class="notif" id="derniereNotif">
+	   			<h4 class="notifTexte">Notifications, AAactivités de la coloc...</h4>
 	   		</div>
 	   		<div class="notif">
 	   			<h4 class="notifTexte">Notifications, activités de la coloc...</h4>
