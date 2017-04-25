@@ -22,11 +22,12 @@
 			</div>
 
 			<div class="addTache" id="addTache">
-				<h4 class="addTacheTexte" id="h4">Ajouter une tâche pour la coloc.</h4>
+				<h4 class="addTacheTexte">Ajouter une tâche pour la coloc.</h4>
 			</div>
 
 			<script>
-				var bouton = document.getElementById('addTache');
+				//var bouton = document.getElementById('addTache');
+				var bouton = document.getElementById('derniereNotif');
 
 				bouton.addEventListener('click', add_tache);
 
@@ -41,11 +42,14 @@
 
 					newTache.appendChild(textTache);
 
-					//document.body.appendChild(newTache); //insère l'objet en tant que dernier éléments => a la fin
+					document.body.appendChild(newTache); //insère l'objet en tant que dernier éléments => a la fin
 
-					var derniereNotif = document.getElementById('derniereNotif'); //leo a fait
+					//var derniereNotif = document.getElementById('derniereNotif'); //leo a fait
 					
-					document.body.insertBefore(newTache, derniereNotif);	//pq ne marche pas ??
+					//document.body.insertBefore(newTache, derniereNotif);	//pq ne marche pas ??
+
+					//var para1 = document.querySelector(".notif"); //par david ne fonctionne pas
+					//document.body.insertBefore(newTache, para1); //par david ne fonction pas
 				};	
 			</script>
 
