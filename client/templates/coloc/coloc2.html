@@ -26,8 +26,7 @@
 			</div>
 
 			<script>
-				//var bouton = document.getElementById('addTache');
-				var bouton = document.getElementById('derniereNotif');
+				var bouton = document.getElementById('addTache');
 
 				bouton.addEventListener('click', add_tache);
 
@@ -37,7 +36,7 @@
 					var newTache = document.createElement('div');
 					newTache.id = 'nouvelleTache';
 
-					newTache.innerHTML = `<h4 class='notifTexte'>${contenu}</h4>`;			//comment faire sans utiliser css ?
+					newTache.innerHTML = `<h4 class='notifTexte'>${contenu}</h4>`;//comment faire sans utiliser css ?
 
 					document.body.appendChild(newTache); //insère l'objet en tant que dernier éléments => a la fin
 
@@ -46,16 +45,8 @@
 					var element_parent = document.getElementById("toutes_notif");
 
 					element_parent.insertBefore(newTache, derniereNotif);	//pq ne marche pas ??
-				};				
-
-					//var derniereNotif = document.getElementById('derniereNotif'); //leo a fait
-					
-					//document.body.insertBefore(newTache, derniereNotif);	//pq ne marche pas ??
-
-					//var para1 = document.querySelector(".notif"); //par david ne fonctionne pas
-					//document.body.insertBefore(newTache, para1); //par david ne fonction pas
 				};	
-
+				
 			</script>
 <div id="toutes_notif">
 	   		<div class="notif" id="derniereNotif">
