@@ -28,28 +28,23 @@
 				bouton.addEventListener('click', add_tache);
 
 				function add_tache(){
-					var x = prompt('Entrez le nom de la tâche');
+					var contenu = prompt('Entrez le nom de la tâche');
 
 					var newTache = document.createElement('div');
 					newTache.id = 'nouvelleTache';
 
-					var textTache = document.createTextNode(x);
-					textTache.innerHTML = '<h4>+x+</h4>';			//comment faire sans utiliser css ?
-
-					newTache.appendChild(textTache);
+					newTache.innerHTML = `<h4 class='notifTexte'>${contenu}</h4>`;			//comment faire sans utiliser css ?
 
 					document.body.appendChild(newTache); //insère l'objet en tant que dernier éléments => a la fin
 
 					var derniereNotif = document.getElementById('derniereNotif');
+					var element_parent = document.getElementById("toutes_notif");
 
-					document.body.insertBefore(newTache, derniereNotif);	//pq ne marche pas ??
+					element_parent.insertBefore(newTache, derniereNotif);	//pq ne marche pas ??
 				};				
 			</script>
-
+<div id="toutes_notif">
 	   		<div class="notif" id="derniereNotif">
-	   			<h4 class="notifTexte">Notifications, AAactivités de la coloc...</h4>
-	   		</div>
-	   		<div class="notif">
 	   			<h4 class="notifTexte">Notifications, activités de la coloc...</h4>
 	   		</div>
 	   		<div class="notif">
@@ -61,6 +56,7 @@
 	   		<div class="notif">
 	   			<h4 class="notifTexte">Notifications, activités de la coloc...</h4>
 	   		</div>
+</div>	   		
 	 <!--  		<div class="jumbotron col-sm-8 text-center pull-right">
 	   			<h4>Notifications, activités de la coloc...</h4>
 	   		</div>
