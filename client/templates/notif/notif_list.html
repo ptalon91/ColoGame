@@ -1,0 +1,8 @@
+<template name="notifList">
+	<div class="notif">
+		<!--For each notif returned by the helper, use template notifItem.-->
+		{{#each notif}}
+			{{> notifItem}}
+		{{/each}}
+	</div>
+</template>
