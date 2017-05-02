@@ -20,14 +20,13 @@
 			   		</div>
 			   	</div>
 			</div>
+	
+		{{>notifList}}
+			
+			
 
-			<div class='notifTexte'>
-				<h4>Notification</h4>
-				{{>notifList}}
-			</div>
-		
 
-			<div class="addTache" id="addTache">
+		<!--	<div class="addTache" id="addTache">
 				<h4 class="addTacheTexte">Ajouter une nouvelle tâche pour la coloc.</h4>
 			</div>
 
@@ -50,12 +49,13 @@
 					var derniereNotif = document.getElementById('derniereNotif');
 					var element_parent = document.getElementById("toutes_notif");
 
-					element_parent.insertBefore(newTache, derniereNotif);	//pq ne marche pas ??
+					element_parent.insertBefore(newTache, derniereNotif);
 				};	
 				
-			</script>
+			</script>	-->
 
-			<div id="toutes_notif">
+
+	<!--	<div id="toutes_notif">
 		   		<div class="notif" id="derniereNotif">
 		   			<h4 class="notifTexte">Notifications, activités de la coloc...</h4>
 		   		</div>
@@ -69,8 +69,9 @@
 		   			<h4 class="notifTexte">Notifications, activités de la coloc...</h4>
 		   		</div>
 			</div>	   		
-
-		 <!-- <div class="jumbotron col-sm-8 text-center pull-right">
+	-->
+	
+	 <!-- <div class="jumbotron col-sm-8 text-center pull-right">
 	   			<h4>Notifications, activités de la coloc...</h4>
 	   		</div>
 	   		<div class="jumbotron col-sm-8 text-center pull-right">
@@ -81,31 +82,8 @@
 	   		</div>
 	   		<div class="jumbotron col-sm-8 text-center pull-right">
 	   			<h4>Notifications, activités de la coloc...</h4>
-	   		</div>	-->
-
-	   		<!--	<h4>Notifications, activités de la coloc...</h4>
-	   			<h4>Notifications, activités de la coloc...</h4>
-	   			<h4>Notifications, activités de la coloc...</h4>
-	   			<h4>Notifications, activités de la coloc...</h4>
-	   			<h4>Notifications, activités de la coloc...</h4>
-	   			<h4>Notifications, activités de la coloc...</h4>
-	   			<h4>Notifications, activités de la coloc...</h4>
-	   			<h4>Notifications, activités de la coloc...</h4>
-	   			<h4>Notifications, activités de la coloc...</h4>
-	   			<h4>Notifications, activités de la coloc...</h4>
-	   			<h4>Notifications, activités de la coloc...</h4>
-	   			<h4>Notifications, activités de la coloc...</h4>
-	   			<h4>Notifications, activités de la coloc...</h4>
-	   			<h4>Notifications, activités de la coloc...</h4>
-	   			<h4>Notifications, activités de la coloc...</h4>
-	   			<h4>Notifications, activités de la coloc...</h4>
-	   			<h4>Notifications, activités de la coloc...</h4>
-	   			<h4>Notifications, activités de la coloc...</h4>
-	   			<h4>Notifications, activités de la coloc...</h4>
-	   			<h4>Notifications, activités de la coloc...</h4>
-	   			<h4>Notifications, activités de la coloc...</h4>
-	   			<h4>Notifications, activités de la coloc...</h4>
-	   		</div> -->
+	   		</div>	
+	  -->
 
 	{{/if}}
 	</div>

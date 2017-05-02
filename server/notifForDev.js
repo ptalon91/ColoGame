@@ -1,7 +1,13 @@
 if (Notif.find().count() === 0) {
   Notif.insert({
-    name: "Les notifications s'affichent ici",
-    descr: 'notification',
+    name: "notification",
+    descr: "Les notifications s'affichent ici",
+    pending: false,
+    createdAt: new Date(),
+  });
+  Notif.insert({
+    name: 'notification',
+    descr:"Les notifications s'affichent ici",
     pending: false,
     createdAt: new Date(),
   });

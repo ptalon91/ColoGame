@@ -1,8 +1,13 @@
 <template name="notifList">
-	<div class="notif">
-		<!--For each notif returned by the helper, use template notifItem.-->
-		{{#each notif}}
-			{{> notifItem}}
-		{{/each}}
+
+	<div class="addTache" id="addTache">
+		<h4 class="addTacheTexte">Ajouter une nouvelle tâche pour la coloccc.</h4>
 	</div>
+
+	<div id="toutes_notif">
+		<div class="notif" id="derniereNotif">
+	   		<h4 class="notifTexte">Notifications, activités de la coloc...</h4>
+		</div>
+	</div>
+	
 </template>

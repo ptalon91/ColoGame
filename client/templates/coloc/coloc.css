@@ -44,11 +44,11 @@
 	padding-top: 15px;
 }
 #nouvelleTache{
-	width: 48.6%;
+	width: 60%;
 	height: 100px;
 	text-align: center;
-	margin-top: 10px;
-	margin-left: 37.8%;
+	margin-top: 20px;
+	margin-left: 35%;
 	border-radius: 15px;
 	background-color: #E7E7E7;
 	transition: 0.5s;
