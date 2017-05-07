@@ -10,7 +10,19 @@ Template.tasksList.helpers({
 // For current user, and for the clicked task's number of points.
 Template.tasksList.events({
 	'click .task-content': function(){
-	    Meteor.call('incrementPoints', Meteor.userId(), this.points);
-	    Meteor.call('createNotif', Meteor.userId(), Meteor.user().username, Meteor.user().points, this.points, this.descr);
+	    Meteor.call(
+	    	'incrementPoints',
+	    	Meteor.userId(),
+	    	this.points
+	    );
+
+	    Meteor.call(
+	    	'createNotif',
+	    	Meteor.userId(),
+	    	Meteor.user().username,
+	    	Meteor.user().points,
+	    	this.points,
+	    	this.descr
+		);
 	}
 });
