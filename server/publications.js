@@ -15,8 +15,7 @@ Meteor.publish('userData', function () {
   }
 });
 
-
 // Notif publication. Here, all tasks are published.
-Meteor.publish('notif', function() {
-	return Notif.find();
+Meteor.publish('notifs', function() {
+	return Notifs.find();
 });
