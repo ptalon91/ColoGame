@@ -1,5 +1,5 @@
 
-// Tasks publication. Here, all tasks are publicated.
+// Tasks publication. Here, all tasks are published.
 Meteor.publish('tasks', function() {
 	return Tasks.find();
 });
@@ -8,7 +8,7 @@ Meteor.publish('tasks', function() {
 Meteor.publish('userData', function () {
   if (this.userId) {
     return Meteor.users.find({}, {
-      fields: { username: 1, points: 1, colocName : 1 }
+      fields: { username: 1, points: 1, colocName: 1 }
     });
   } else {
     this.ready();
@@ -16,7 +16,7 @@ Meteor.publish('userData', function () {
 });
 
 
-// Notif publication. Here, all tasks are publicated.
+// Notif publication. Here, all tasks are published.
 Meteor.publish('notif', function() {
 	return Notif.find();
 });

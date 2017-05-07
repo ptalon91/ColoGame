@@ -2,7 +2,9 @@
 	<div class="container">
 		<!-- Profile image is not reactive yet. It should later be uploaded by the user and be loaded after login.-->
 		<!-- #if currentUser return the current user, allowing to get his own data. -->
-		{{#if currentUser}}
+		
+
+		{{#if currentUser.colocName != "abcd"}}
 			<div class="col-sm-3">
 				<div class="row">
 					<img class="img-responsive img-rounded" src="/data/profile_pic.png" style="margin-left: -1em;"/>
@@ -86,5 +88,13 @@
 	  -->
 
 	{{/if}}
+
+	{{#if currentUser.colocName = "abcd"}}
+		<div class="jumbotron col-sm-8 text-center pull-right">
+	   		<h4>Please create your new Coloc or join one.</h4>
+	   	</div>
+	{{/if}}
+
 	</div>
+	
 </template>
