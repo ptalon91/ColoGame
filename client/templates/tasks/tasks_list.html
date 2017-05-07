@@ -1,5 +1,8 @@
 <template name="tasksList">
-	<div class="tasks">
+	<div class="tasks container">
+		<div class="jumbotron">
+			<h2>Quelle tâche venez-vous d'effectuer ?</h2>
+		</div>
 		<!--For each tasks returned by the helper, use template taskItem.-->
 		{{#each tasks}}
 			{{> taskItem}}
