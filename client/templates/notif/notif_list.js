@@ -1,5 +1,12 @@
 // Helpers for the notifList template. Returns every notif from the database and assign it to "notif"
-Template.notifList.events({
+// Helper for the tasksList template. Returns every tasks from the database and assign it to "tasks"
+Template.notifsList.helpers({
+	notifs: function() {
+		return Notifs.find({}, {sort: {createdAt: -1, limit: 15}});
+	}
+});
+
+/*Template.notifList.events({
 
 	'click .addTache': function() {
 
@@ -19,4 +26,4 @@ Template.notifList.events({
 
 					element_parent.insertBefore(newTache, derniereNotif);			
 	}
-});
+});*/
