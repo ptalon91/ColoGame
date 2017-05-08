@@ -50,6 +50,7 @@ launch-screen@1.1.1
 livedata@1.0.18
 localstorage@1.0.12
 logging@1.1.17
+matdutour:popup-confirm@0.2.2
 meteor@1.6.1
 meteor-base@1.0.4
 meteortoys:toykit@3.0.4
