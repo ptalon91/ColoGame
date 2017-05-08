@@ -10,17 +10,20 @@
       <ul class="nav navbar-nav navbar-right">
           <a href="{{pathFor 'profile'}}"><img class="img-responsive" src="/data/profile_pic.png" width="50" /></a>
       </ul>
+      {{/if}}
+      <ul class="nav navbar-nav navbar-right">
+          <!-- Show login button. -->
+          {{> loginButtons}}
+      </ul>
+      {{#if currentUser}}
       <ul class="nav navbar-nav navbar-right">
           <a class="navbar-brand" href="{{pathFor 'coloc'}}"><small>My Coloc</small></a>
       </ul>
+
       <ul class="nav navbar-nav navbar-right">
           <a class="navbar-brand" href="{{pathFor 'tasksList'}}"><small>Tasks</small></a>
       </ul>
       {{/if}}
-      <ul class="nav navbar-nav navbar-right">
-        <!-- Show login button. -->
-        {{> loginButtons}}
-      </ul>
     </div>  
   </nav>
 </template>
