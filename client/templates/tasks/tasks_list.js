@@ -9,7 +9,7 @@ Template.tasksList.helpers({
 // Calls the method "incrementPoints" and "createNotif" defined on server side. 
 // For current user, and for the clicked task's number of points.
 Template.tasksList.events({
-	'click .task-content': function(){
+	'click #task_content': function(){
 	    
 		// Parameters...
 		let task_points = this.points;
@@ -50,3 +50,50 @@ Template.tasksList.events({
 		});
 	}
 });
+
+Template.tasksList.events({
+	'click #new_tache': function(){
+	    var contenu = prompt('Entrez le nom de la tâche');
+	    var points = prompt('Entrez le nombre de points');
+
+		var newTache = document.createElement('div');
+		newTache.id = 'nouvelleTache';
+		newTache.className = 'notif';
+
+		newTache.innerHTML = `<h4 class='notifTexte' id='notifTexte'>${contenu}</h4>`;//comment faire sans utiliser css ?
+
+	/*	if (newTache) {
+			var derniereNotif = document.getElementById('task-content');
+			var element_parent = document.getElementById('toutes_notif');
+
+			element_parent.insertBefore(newTache, derniereNotif);
+			} else{};	
+
+		var derniereNotif = document.getElementById('task_content');
+		var element_parent = document.getElementById("toutes_notif");
+
+		element_parent.insertBefore(newTache, task_content); */
+
+		Tasks.insert({
+  		  name: contenu,
+ 		  points: points, 
+ 		  service: true, 
+ 		  gage: true, 
+  		  pending: false,
+ 		  createdAt: new Date(),
+		});
+
+		Meteor.call(
+			'creatTache',
+			task_points,
+			task_descr
+		);
+
+		Meteor.call(
+			'incrementPoints',		//ne fonctionne pas...
+			Meteor.userId(),
+			task_points
+		);
+	}
+});
+

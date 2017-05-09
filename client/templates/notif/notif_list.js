@@ -2,9 +2,14 @@
 // Helper for the tasksList template. Returns every tasks from the database and assign it to "tasks"
 Template.notifsList.helpers({
 	notifs: function() {
+
 		return Notifs.find({}, {sort: {createdAt: -1}, limit: 15});
 	}
 });
+
+		
+	
+
 
 /*Template.notifList.events({
 
@@ -16,14 +21,20 @@ Template.notifsList.helpers({
 					newTache.id = 'nouvelleTache';
 					newTache.className = 'notif';
 
-					newTache.innerHTML = `<h4 class='notifTexte'>${contenu}</h4>`;//comment faire sans utiliser css ?
+					newTache.innerHTML = `<h4 class='notifTexte' id='notifTexte'>${contenu}</h4>`;//comment faire sans utiliser css ?
 
 					document.body.appendChild(newTache); //insère l'objet en tant que dernier éléments => a la fin
 
+					if (newTache) {
+						var derniereNotif = document.getElementById('notifTexte');
+						var element_parent = document.getElementById('toutes_notif');
 
-					var derniereNotif = document.querySelector('.notif');
+						element_parent.insertBefore(newTache, derniereNotif);
+					}else{};
+
+				/*	var derniereNotif = document.querySelector('.notif');
 					var element_parent = document.getElementById("toutes_notif");
 
-					element_parent.insertBefore(newTache, derniereNotif);			
+					element_parent.insertBefore(newTache, derniereNotif);		
 	}
-});*/
+}); */

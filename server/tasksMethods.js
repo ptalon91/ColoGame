@@ -13,7 +13,14 @@ Meteor.methods({
 			authorID: current_userId,
 			createdAt: new Date()
 		})
-	}
+	}, 
+
+  creatTache(task_points, task_descr){
+    Tasks.insert({
+      text: 'Tâche: ' + task_descr + ', ' + 'Points: ' + task_points,
+      createdAt: new Date()
+    })
+  }
 });
 
 

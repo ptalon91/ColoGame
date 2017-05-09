@@ -1,4 +1,4 @@
-/*.notif{
+.notif{
 	width: 60%;
 	height: 100px;
 	text-align: center;
@@ -37,7 +37,6 @@
 .addTache:hover{
 	background-color: rgba(145, 255, 213, 0.4);
 	box-shadow: 0px 0px 5px black;
-	font-size: 50%;
 	transition: background-color 0.5s, box-shadow 0.5s;
 }
 .addTacheTexte{
@@ -61,7 +60,7 @@
 }
 #textTache{
 	background-color: red;
-}*/
+}
 
 
 
