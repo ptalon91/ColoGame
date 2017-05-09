@@ -96,8 +96,8 @@ Template.tasksList.events({
 	}
 });
 
-Template.tasksList.events({
-	'click .toggle-checked': function(){
+Template.taskItem.events({
+	'click .ckeck': function(){
 		Tasks.update(this._id, {$set:{checked: !this.checked}});
 	},
 

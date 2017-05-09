@@ -12,17 +12,8 @@
 	box-shadow: 0px 0px 5px black;
 	transition: background-color 0.5s, box-shadow 0.5s;
 }
-
 .notifText{
 	padding-top: 20px;
-}
-
-#afaire{
-	margin-top: 20px;
-	background-color: rgba(145, 255, 213, 0.4);
-}
-#effetuees{
-	background-color: rgba(255, 000, 000, 0.5);
 }
 
 #add_tache{
@@ -43,10 +34,32 @@
 	padding-top: 4px;
 }
 
-#textTache{
-	background-color: red;
+.delete{
+	float: right;
+	width: 150px;
+	height: 50px;
+	margin-top: 15px;
+	border-radius: 15px;
+	background-color: rgba(255, 000, 000, 0.5);
+	color: white; 
+	transition: background-color 0.5s, box-shadow 0.5s;
+}
+.delete:hover{
+	box-shadow: 0px 0px 5px black;
+	background-color: rgba(255, 000, 000, 0.7);
+	transition: background-color 0.5s, box-shadow 0.5s;
 }
 
+#afaire{
+	padding-top: 25px;
+	margin-top: 15px;
+	background-color: rgba(145, 255, 213, 0.4);
+}
+#effetuees{
+	padding-top: 25px;
+	margin-top: 15px;
+	background-color: rgba(255, 000, 000, 0.5);
+}
 
 
 

@@ -1,6 +1,13 @@
 <template name="taskItem">
 	<div class="task">
+		<label for="test" class="ckeck">
+			<input type="checkbox" checked="{{checked}}" >
+			<span class="span1"></span>						<!--aussi compliqué pour le css-->
+			Cette tâche a été faite.
+		</label>
+
 		<div class="notif well well-sm text-center" id="task_content">
+			<button class="delete">Supprimer</button>
    			<p><h4 class="notifText"><b>Tâche</b>: {{name}}, <b>Points</b>: {{points}}</h4></p>
    		</div>
 	</div>
