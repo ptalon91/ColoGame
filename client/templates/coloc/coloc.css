@@ -10,57 +10,43 @@
 .notif:hover{
 	background-color: rgba(145, 255, 213, 0.4);
 	box-shadow: 0px 0px 5px black;
-	font-size: 50%;
 	transition: background-color 0.5s, box-shadow 0.5s;
 }
 
-.notifTexte{
-	padding-top: 40px;
+.notifText{
+	padding-top: 20px;
 }
 
 #afaire{
+	margin-top: 20px;
 	background-color: rgba(145, 255, 213, 0.4);
 }
 #effetuees{
 	background-color: rgba(255, 000, 000, 0.5);
 }
 
-.addTache{
+#add_tache{
 	width: 60%;
-	height: 50px;
+	height: 30px;
 	text-align: center;
-	margin-left: 35%;
+	margin-bottom: 4%;
 	border-radius: 15px;
 	background-color: rgba(145, 255, 213, 0.4);
 	transition: 0.5s;
 }
-.addTache:hover{
+#add_tache:hover{
 	background-color: rgba(145, 255, 213, 0.4);
 	box-shadow: 0px 0px 5px black;
 	transition: background-color 0.5s, box-shadow 0.5s;
 }
-.addTacheTexte{
-	padding-top: 15px;
+.add_tacheText{
+	padding-top: 4px;
 }
-#nouvelleTache{
-	width: 60%;
-	height: 100px;
-	text-align: center;
-	margin-top: 20px;
-	margin-left: 35%;
-	border-radius: 15px;
-	background-color: #E7E7E7;
-	transition: 0.5s;
-}
-#nouvelleTache:hover{
-	background-color: rgba(145, 255, 213, 0.4);
-	box-shadow: 0px 0px 5px black;
-	font-size: 50%;
-	transition: background-color 0.5s, box-shadow 0.5s;
-}
+
 #textTache{
 	background-color: red;
 }
+
 
 
 

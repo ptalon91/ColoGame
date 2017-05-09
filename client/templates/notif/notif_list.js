@@ -6,35 +6,3 @@ Template.notifsList.helpers({
 		return Notifs.find({}, {sort: {createdAt: -1}, limit: 15});
 	}
 });
-
-		
-	
-
-
-/*Template.notifList.events({
-
-	'click .addTache': function() {
-
-					var contenu = prompt('Entrez le nom de la tâche');
-
-					var newTache = document.createElement('div');
-					newTache.id = 'nouvelleTache';
-					newTache.className = 'notif';
-
-					newTache.innerHTML = `<h4 class='notifTexte' id='notifTexte'>${contenu}</h4>`;//comment faire sans utiliser css ?
-
-					document.body.appendChild(newTache); //insère l'objet en tant que dernier éléments => a la fin
-
-					if (newTache) {
-						var derniereNotif = document.getElementById('notifTexte');
-						var element_parent = document.getElementById('toutes_notif');
-
-						element_parent.insertBefore(newTache, derniereNotif);
-					}else{};
-
-				/*	var derniereNotif = document.querySelector('.notif');
-					var element_parent = document.getElementById("toutes_notif");
-
-					element_parent.insertBefore(newTache, derniereNotif);		
-	}
-}); */

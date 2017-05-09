@@ -52,7 +52,7 @@ Template.tasksList.events({
 });
 
 Template.tasksList.events({
-	'click #new_tache': function(){
+	'click #add_tache': function(){
 	    var contenu = prompt('Entrez le nom de la tâche');
 	    var points = prompt('Entrez le nombre de points');
 
@@ -60,8 +60,7 @@ Template.tasksList.events({
 		newTache.id = 'nouvelleTache';
 		newTache.className = 'notif';
 
-		newTache.innerHTML = `<h4 class='notifTexte' id='notifTexte'>${contenu}</h4>`;//comment faire sans utiliser css ?
-
+		newTache.innerHTML = `<h4 class='notifTexte' id='notifTexte'>${contenu}</h4>`;
 	/*	if (newTache) {
 			var derniereNotif = document.getElementById('task-content');
 			var element_parent = document.getElementById('toutes_notif');
@@ -95,5 +94,16 @@ Template.tasksList.events({
 			task_points
 		);
 	}
+});
+
+Template.tasksList.events({
+	'click .toggle-checked': function(){
+		Tasks.update(this._id, {$set:{checked: !this.checked}});
+	},
+
+	'click .delete': function(){
+		Tasks.remove(this._id);
+	}
+
 });
 
