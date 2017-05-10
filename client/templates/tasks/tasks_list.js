@@ -54,7 +54,7 @@ Template.tasksList.events({
 Template.tasksList.events({
 	'click #add_tache': function(){
 	    var contenu = prompt('Entrez le nom de la tâche');
-	    var points = prompt('Entrez le nombre de points');
+	    var points = Number(prompt('Entrez le nombre de points'));
 
 		var newTache = document.createElement('div');
 		newTache.id = 'nouvelleTache';
@@ -86,12 +86,6 @@ Template.tasksList.events({
 			'creatTache',
 			task_points,
 			task_descr
-		);
-
-		Meteor.call(
-			'incrementPoints',		//ne fonctionne pas...
-			Meteor.userId(),
-			task_points
 		);
 	}
 });
