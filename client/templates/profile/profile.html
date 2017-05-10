@@ -13,38 +13,28 @@
 						<li><h3>{{currentUser.colocName}} Coloc</h3></li>
 		   			</ul>
 	   			</div>
-			</div>
-	   		<div class="notif" id="afaire">
-	   			<h4 class="notifTexte">Tâches à faire.</h4>
-	   		</div>
-	   		<div class="notif" id="afaire">
-	   			<h4 class="notifTexte">Tâches à faire.</h4>
-	   		</div>
-	   		<div class="notif" id="afaire">
-	   			<h4 class="notifTexte">Tâches à faire.</h4>
-	   		</div>
-	   		<div class="notif" id="effetuees">
-	   			<h4 class="notifTexte">Tâches effectuées.</h4>
-	   		</div>
-	   		<div class="notif" id="effetuees">
-	   			<h4 class="notifTexte">Tâches effectuées.</h4>
-	   		</div>
+		</div>
 
-	   		<!--	<h4>Liste des derniers gages/tâches effectué.</h4>
-	   			<h4>Liste des derniers gages/tâches effectué.</h4>
-	   			<h4>Liste des derniers gages/tâches effectué.</h4>
-	   			<h4>Liste des derniers gages/tâches effectué.</h4>
-	   			<h4>Liste des derniers gages/tâches effectué.</h4>
-	   			<h4>Liste des derniers gages/tâches effectué.</h4>
-	   			<h4>Liste des derniers gages/tâches effectué.</h4>
-	   			<h4>Liste des derniers gages/tâches effectué.</h4>
-	   			<h4>Liste des derniers gages/tâches effectué.</h4>
-	   			<h4>Liste des derniers gages/tâches effectué.</h4>
-	   			<h4>Liste des derniers gages/tâches effectué.</h4>
-	   			<h4>Liste des derniers gages/tâches effectué.</h4>
-	   			<h4>Liste des derniers gages/tâches effectué.</h4>
+		<div>
+	   		{{#each notifs}}
+				{{> notifItem}}
+			{{/each}}
+		</div>			
+	 <!--  		<div class="notif" id="afaire">
+	   			<h4 class="notifTexte">Tâches à faire.</h4>
+	   		</div>
+	   		<div class="notif" id="afaire">
+	   			<h4 class="notifTexte">Tâches à faire.</h4>
+	   		</div>
+	   		<div class="notif" id="afaire">
+	   			<h4 class="notifTexte">Tâches à faire.</h4>
+	   		</div>
+	   		<div class="notif" id="effetuees">
+	   			<h4 class="notifTexte">Tâches effectuées.</h4>
+	   		</div>
+	   		<div class="notif" id="effetuees">
+	   			<h4 class="notifTexte">Tâches effectuées.</h4>
 	   		</div> -->
-
 		{{/if}}
 	</div>
 </template>
