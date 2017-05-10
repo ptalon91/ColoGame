@@ -15,7 +15,7 @@
 .notifText{
 	padding-top: 20px;
 }
-
+/*le bouton pour ajouter une tache dans tasks*/
 #add_tache{
 	width: 60%;
 	height: 30px;
