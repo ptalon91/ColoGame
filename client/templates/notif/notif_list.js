@@ -2,7 +2,7 @@
 // Helper for the tasksList template. Returns every tasks from the database and assign it to "tasks"
 Template.notifsList.helpers({
 	notifs: function() {
-		return Notifs.find({}, {sort: {createdAt: -1}, limit: 15});
+		return Notifs.find({colocName: Meteor.user().colocName}, {sort: {createdAt: -1}, limit: 15});
 	}
 });
 

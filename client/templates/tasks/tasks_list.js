@@ -37,7 +37,7 @@ Template.tasksList.events({
 				// Call method on server to create a notification.
 				Meteor.call(
 					'createNotif',
-					Meteor.userId(),
+					Meteor.user().colocName,
 					Meteor.user().username,
 					Meteor.user().points,
 					task_points,
