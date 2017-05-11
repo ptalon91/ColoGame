@@ -1,6 +1,6 @@
 // Methods called in tasks_list.js.
 Meteor.methods({
-	
+
 	// Updates current user's number of points with the clicked task's number of points.
 	incrementPoints(current_userId, task_points) {
 		Meteor.users.update({_id: current_userId}, {$inc: {'points': task_points}})
@@ -11,9 +11,7 @@ Meteor.methods({
 		Notifs.insert({
 			text: current_username + " a " + task_descr + " et remporte " + task_points + " points. Bravo !",
 			colocName: current_colocName,
-			createdAt: new Date()
+			createdAt: new Date() 
 		})
 	}
 });
-
-
