@@ -20,7 +20,7 @@ Template.tasksList.events({
 		new Confirmation({
 		  message: box_message,
 		  title: "Confirmation",
-		  cancelText: "Annuler", 
+		  cancelText: "Annuler",
 		  okText: "Oui",
 		  success: true, // whether the button should be green or red
 		  focus: "cancel" // which button to autofocus, "cancel" (default) or "ok", or "none"
