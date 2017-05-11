@@ -11,7 +11,7 @@ Meteor.methods({
 		Notifs.insert({
 			text: current_username + " a " + task_descr + " et remporte " + task_points + " points. Bravo !",
 			colocName: current_colocName,
-			createdAt: new Date()
+			createdAt: new Date() 
 		})
 	}
 });
