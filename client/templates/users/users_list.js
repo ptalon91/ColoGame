@@ -4,4 +4,4 @@ Template.usersList.helpers({
 	users: function() {
 		return Meteor.users.find({colocName: Meteor.user().colocName}, {sort: {points:-1}});
 	}
-});
+}); 

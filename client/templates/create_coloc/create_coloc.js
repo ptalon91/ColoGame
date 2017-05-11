@@ -4,9 +4,9 @@ Template.createColoc.events({
       if (evt.which === 13){
       let contenu = document.getElementById('colocName').value;
 
-      Meteor.call( 
+      Meteor.call(
         'createColoc',
-        Meteor.userId(),
+        Meteor.userId(), 
         contenu
       );
     }

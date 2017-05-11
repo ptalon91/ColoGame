@@ -5,12 +5,12 @@
 		{{#if currentUser}}
 			<!--#if check_if_coloc returns the current user's colocName field. If it's null, show the following message-->
 			{{#if check_if_coloc}}
-				<p>Vous ne faites pas partie d'une coloc. Créer ou rejoindre une coloc' !</p>
+				{{>createColoc}}
 
 			<!-- Else show his own data and data of users with same colocName.-->
 			{{else}}
 				<div class="col-sm-3">
-					<div class="row"> 
+					<div class="row">
 						<img class="img-responsive img-rounded" src="/data/profile_pic.png" style="margin-left: -1em;"/>
 						<ul class="list-unstyled">
 			   				<!-- Returns username and points fields of the current user and include into HTML. -->
