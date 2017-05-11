@@ -104,12 +104,12 @@ Template.taskItem.events({
 //compte a rebours
 
 Template.taskItem.events({
-	'click #compteur':function(t){
+	'click #compteur':function(){
 
 		var duree = Number(prompt('Entrez le nombre de jour avant de la refaire:')*3600*24);
 
                 
-            
+            function t(){
                 var compteur=document.getElementById('compteur');
                 s=duree;
                 m=0;h=0;j=0;
@@ -146,10 +146,10 @@ Template.taskItem.events({
 
 
                 duree=duree-1;
-                window.setTimeout("(t)",999);
+                window.setTimeout("t();",999);
 
-            
-            
+            }
+            t();
 	}
 });
 
