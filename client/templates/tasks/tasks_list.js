@@ -14,7 +14,7 @@ Template.tasksList.events({
 		// Parameters...
 		let task_points = this.points;
 		let task_descr = this.descr;
-		let box_message = "Confirmez-vous avoir " + task_descr + " ?";
+		let box_message = "Vous avez vraiment " + task_descr + " ?";
 
 		// Confirmation box when clicking a task. "ok" is true if the user clicked on "ok", false otherwise
 		new Confirmation({
