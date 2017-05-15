@@ -6,16 +6,15 @@ Template.tasksList.helpers({
 });
 
 // Event for the tasksList template.
-// Calls the method "incrementPoints" and "createNotif" defined on server side. 
+// Calls the method "incrementPoints" and "createNotif" defined on server side.
 // For current user, and for the clicked task's number of points.
 Template.tasksList.events({
 	'click #task_content': function(){
-	    
 		// Parameters...
 		let task_points = this.points;
 		let task_descr = this.descr;
-		let box_message = "Confirmez-vous avoir " + task_descr + " ?";
-		
+		let box_message = "Vous avez vraiment " + task_descr + " ?";
+
 		// Confirmation box when clicking a task. "ok" is true if the user clicked on "ok", false otherwise
 		new Confirmation({
 		  message: box_message,
@@ -25,7 +24,7 @@ Template.tasksList.events({
 		  success: true, // whether the button should be green or red
 		  focus: "cancel" // which button to autofocus, "cancel" (default) or "ok", or "none"
 		}, function (ok) {
-		
+
 			if (ok == true){
 				// Call method on server for incrementing user's points.
 				Meteor.call(
@@ -37,13 +36,13 @@ Template.tasksList.events({
 				// Call method on server to create a notification.
 				Meteor.call(
 					'createNotif',
-					Meteor.userId(),
+					Meteor.user().colocName,
 					Meteor.user().username,
 					Meteor.user().points,
 					task_points,
 					task_descr
 				);
-				
+
 				// After confirmation, redirect to coloc page.
 				Router.go('coloc');
 			}
@@ -66,7 +65,7 @@ Template.tasksList.events({
 			var element_parent = document.getElementById('toutes_notif');
 
 			element_parent.insertBefore(newTache, derniereNotif);
-			} else{};	
+			} else{};
 
 		var derniereNotif = document.getElementById('task_content');
 		var element_parent = document.getElementById("toutes_notif");
@@ -75,9 +74,9 @@ Template.tasksList.events({
 
 		Tasks.insert({
   		  name: contenu,
- 		  points: points, 
- 		  service: true, 
- 		  gage: true, 
+ 		  points: points,
+ 		  service: true,
+ 		  gage: true,
   		  pending: false,
  		  createdAt: new Date(),
 		});
@@ -108,15 +107,15 @@ Template.taskItem.events({
 
 		var duree = Number(prompt('Entrez le nombre de jour avant de la refaire:')*3600*24);
 
-                
-            
+
+
                 var compteur=document.getElementById('compteur');
                 s=duree;
                 m=0;h=0;j=0;
 
 
                 if(s<0){
-                    compteur.innerHTML="terminé<br/>"+"<a href=tasks_list.js>continuer</a>" 
+                    compteur.innerHTML="terminé<br/>"+"<a href=tasks_list.js>continuer</a>"
                 }
                 else{
                     if(s>59){
@@ -141,15 +140,14 @@ Template.taskItem.events({
                         h="0"+h
                     }
 
-                    compteur.innerHTML= j + ":" + h + ":" + m + ":" + s; 
+                    compteur.innerHTML= j + ":" + h + ":" + m + ":" + s;
                 }
 
 
                 duree=duree-1;
                 window.setTimeout("(t)",999);
 
-            
-            
+
+
 	}
 });
-
