@@ -9,11 +9,11 @@ Meteor.methods({
 	// Creates a notification when user clicks on a task he made.
     createNotif(current_colocName, current_username, current_username_points, task_points, task_descr) {
 		Notifs.insert({
-			text: current_username + " a " + task_descr + " et gagne " + task_points + " points!",
+			text: current_username + " a " + "\"" + task_descr+ "\"" + " et gagne " + task_points + " points!",
 			colocName: current_colocName,
 			createdAt: new Date()
 		})
-	}, 
+	},
 
   creatTache(task_points, task_descr){
     Tasks.insert({
