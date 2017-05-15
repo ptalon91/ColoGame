@@ -1,10 +1,14 @@
 <template name="coloc">
 	<div class="container">
+		
 		<!-- Profile image is not reactive yet. It should later be uploaded by the user and be loaded after login.-->
 		<!-- #if currentUser return the current user, allowing to get his own data. -->
 		{{#if currentUser}}
-			<!--#if check_if_coloc returns the current user's colocName field. If it's null, show the following message-->
+			
+			<!--#if check_if_coloc returns the current user's colocName field (see helper). If it's null, show the following message-->
 			{{#if check_if_coloc}}
+				
+				<!--Returns coloc creation template.-->
 				{{>createColoc}}
 
 			<!-- Else show his own data and data of users with same colocName.-->
@@ -22,76 +26,18 @@
 				   	<div class="row">
 				   		<div style="padding-top: 2%">
 				   			<h4>Scores et classement</h4>
+				   			<!--Returns users list template-->
 						 	{{>usersList}}
 				   		</div>
 				   	</div>
 				</div>
 
-			{{>notifsList}}
+				<!--Returns notifications list template.-->
+				{{>notifsList}}
 
+			{{/if}}
 
-
-
-			<!--	<div class="addTache" id="addTache">
-					<h4 class="addTacheTexte">Ajouter une nouvelle tâche pour la coloc.</h4>
-				</div>
-
-				<script>
-					var bouton = document.getElementById('addTache');
-
-					bouton.addEventListener('click', add_tache);
-
-					function add_tache(){
-						var contenu = prompt('Entrez le nom de la tâche');
-
-						var newTache = document.createElement('div');
-						newTache.id = 'nouvelleTache';
-
-						newTache.innerHTML = `<h4 class='notifTexte'>${contenu}</h4>`;//comment faire sans utiliser css ?
-
-						document.body.appendChild(newTache); //insère l'objet en tant que dernier éléments => a la fin
-
-
-						var derniereNotif = document.getElementById('derniereNotif');
-						var element_parent = document.getElementById("toutes_notif");
-
-						element_parent.insertBefore(newTache, derniereNotif);
-					};
-
-				</script>	-->
-
-
-		<!--	<div id="toutes_notif">
-			   		<div class="notif" id="derniereNotif">
-			   			<h4 class="notifTexte">Notifications, activités de la coloc...</h4>
-			   		</div>
-			   		<div class="notif">
-			   			<h4 class="notifTexte">Notifications, activités de la coloc...</h4>
-			   		</div>
-			   		<div class="notif">
-			   			<h4 class="notifTexte">Notifications, activités de la coloc...</h4>
-			   		</div>
-			   		<div class="notif">
-			   			<h4 class="notifTexte">Notifications, activités de la coloc...</h4>
-			   		</div>
-				</div>
-		-->
-
-		 <!-- <div class="jumbotron col-sm-8 text-center pull-right">
-		   			<h4>Notifications, activités de la coloc...</h4>
-		   		</div>
-		   		<div class="jumbotron col-sm-8 text-center pull-right">
-		   			<h4>Notifications, activités de la coloc...</h4>
-		   		</div>
-		   		<div class="jumbotron col-sm-8 text-center pull-right">
-		   			<h4>Notifications, activités de la coloc...</h4>
-		   		</div>
-		   		<div class="jumbotron col-sm-8 text-center pull-right">
-		   			<h4>Notifications, activités de la coloc...</h4>
-		   		</div>
-		  -->
 		{{/if}}
-	{{/if}}
+		
 	</div>
-
 </template>

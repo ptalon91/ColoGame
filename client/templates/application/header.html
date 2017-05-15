@@ -4,26 +4,31 @@
       <!-- Clicking on the title brings back to home page -->
       <a class="navbar-brand" href="{{pathFor 'homePage'}}">ColoGame - Manage your flatshare with fun</a>
     </div>
+
     <div class="collapse navbar-collapse" id="navigation">
+      
       <!-- If user is connected show profile picture. Not responsive yet. -->
       {{#if currentUser}}
-      <ul class="nav navbar-nav navbar-right">
-          <a href="{{pathFor 'profile'}}"><img class="img-responsive" src="/data/profile_pic.png" width="50" /></a>
-      </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <a href="{{pathFor 'profile'}}"><img class="img-responsive" src="/data/profile_pic.png" width="50" /></a>
+        </ul>
       {{/if}}
-      <ul class="nav navbar-nav navbar-right">
-          <!-- Show login button. -->
-          {{> loginButtons}}
-      </ul>
-      {{#if currentUser}}
-      <ul class="nav navbar-nav navbar-right">
-          <a class="navbar-brand" href="{{pathFor 'coloc'}}"><small>My Coloc</small></a>
-      </ul>
 
       <ul class="nav navbar-nav navbar-right">
-          <a class="navbar-brand" href="{{pathFor 'tasksList'}}"><small>Tasks</small></a>
+        <!-- Show login button. -->
+        {{> loginButtons}}
       </ul>
+
+      {{#if currentUser}}
+        <ul class="nav navbar-nav navbar-right">
+            <a class="navbar-brand" href="{{pathFor 'coloc'}}"><small>My Coloc</small></a>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+            <a class="navbar-brand" href="{{pathFor 'tasksList'}}"><small>Tasks</small></a>
+        </ul>
       {{/if}}
+      
     </div>  
   </nav>
 </template>

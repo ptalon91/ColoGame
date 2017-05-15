@@ -1,4 +1,3 @@
-
 // Tasks publication. Here, all tasks are published.
 Meteor.publish('tasks', function() {
 	return Tasks.find();
