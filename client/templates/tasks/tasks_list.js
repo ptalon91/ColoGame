@@ -73,13 +73,14 @@ Template.tasksList.events({
 		element_parent.insertBefore(newTache, task_content); */
 
 		Tasks.insert({
-  		name: contenu,
+			name: contenu,
 			descr: contenu,
- 		  points: points,
- 		  service: true,
- 		  gage: true,
-  		pending: false,
- 		  createdAt: new Date(),
+			points: points,
+			service: true,
+			gage: true,
+			pending: false,
+			createdAt: new Date(),
+			checked: false
 		});
 
 		Meteor.call(

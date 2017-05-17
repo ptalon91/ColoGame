@@ -20,4 +20,12 @@ client/main.css
 
 client/main.css
 
+<<<<<<< Updated upstream
 client/.main.html.swp
+=======
+client/.main.html.swp
+
+client/templates/coloc/coloc.html
+
+.meteor/packages
+>>>>>>> Stashed changes
