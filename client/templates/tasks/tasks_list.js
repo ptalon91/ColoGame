@@ -147,3 +147,25 @@ Template.taskItem.events({
             t();
 	}
 });
+
+
+
+
+
+
+
+var countdown = new ReactiveCountdown(5);
+
+countdown.start(function() {
+
+   alert('c est fini');
+
+});
+
+Template.car.helpers({
+
+    getCountdown: function() {
+        return countdown.get();
+    }
+
+});
