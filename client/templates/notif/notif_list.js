@@ -4,3 +4,9 @@ Template.notifsList.helpers({
 		return Notifs.find({colocName: Meteor.user().colocName}, {sort: {createdAt: -1}, limit: 15});
 	}
 });
+
+// Template.notifList.event({
+// 	if(currentUser.points < user.points){
+// 		alert(Attention êtes le dernier du classement, accomplissez une tâche pour ne pas recevoir de gage.);
+// 	}
+// })

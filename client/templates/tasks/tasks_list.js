@@ -84,9 +84,7 @@ Template.tasksList.events({
 		});
 
 		Meteor.call(
-			'creatTache',
-			task_points,
-			task_descr
+			'creatTache'
 		);
 	}
 });
@@ -94,6 +92,7 @@ Template.tasksList.events({
 Template.taskItem.events({
 	'click .ckeck': function(){
 		Tasks.update(this._id, {$set:{checked: !this.checked}});
+		// document.getElementById(task_content).style.visibility = 'hidden';
 	},
 
 	'click .delete': function(){
@@ -103,7 +102,6 @@ Template.taskItem.events({
 });
 
 //compte a rebours
-
 Template.taskItem.events({
 	'click #compteur':function(){
 
@@ -148,4 +146,26 @@ Template.taskItem.events({
             }
             t();
 	}
+});
+
+
+
+
+
+
+
+var countdown = new ReactiveCountdown(5);
+
+countdown.start(function() {
+
+   alert('c est fini');
+
+});
+
+Template.car.helpers({
+
+    getCountdown: function() {
+        return countdown.get();
+    }
+
 });
