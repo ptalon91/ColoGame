@@ -1,5 +1,5 @@
 # ColoGame
-Projet Prog Int II
+Projet Prog Int II.
 
 Introduction
   déscription
