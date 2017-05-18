@@ -3,24 +3,23 @@ Template.createColoc.events({
 		let contenu = document.getElementById('colocName').value;
 		let box_message = "Voulez-vous vraiment créer ou rejoindre la coloc " + contenu + " ?";
     if (evt.which === 13 && contenu !== ''){
-			// Confirmation box when creating new coloc or new joining one
+			// Confirmation box when creating new coloc or joining a new one
 			new Confirmation({
 				message: box_message,
 				title: "Confirmation",
 				cancelText: "Annuler",
 				okText: "Oui",
-				success: true, // whether the button should be green or red
-				focus: "cancel" // which button to autofocus, "cancel" (default) or "ok", or "none"
+				success: true,
+				focus: "cancel"
 			}, function (ok) {
-
-				if (ok == true){
-					// Call method on server for creating new coloc
-    			Meteor.call(
-      			'createColoc',
-      			Meteor.userId(),
-      			contenu
-    			);
-  			}
+					if (ok == true){
+						// Call method on server for creating new coloc
+	    			Meteor.call(
+	      			'createColoc',
+	      			Meteor.userId(),
+	      			contenu
+	    			);
+	  			}
 			});
 		}
 	}
