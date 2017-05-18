@@ -42,7 +42,6 @@ Template.tasksList.events({
 					task_points,
 					task_descr
 				);
-
 				// After confirmation, redirect to coloc page.
 				Router.go('coloc');
 			}
@@ -52,39 +51,38 @@ Template.tasksList.events({
 
 Template.tasksList.events({
 	'click #add_tache': function(){
-	    var contenu = prompt('Entrez le nom de la tâche');
-	    var points = Number(prompt('Entrez le nombre de points'));
+	    letcontenu = prompt('Entrez le nom de la tâche');
+	    let points = Number(prompt('Entrez le nombre de points'));
+			let newTache = document.createElement('div');
+			newTache.id = 'nouvelleTache';
+			newTache.className = 'notif';
+			newTache.innerHTML = `<h4 class='notifTexte' id='notifTexte'>${contenu}</h4>`;
 
-		var newTache = document.createElement('div');
-		newTache.id = 'nouvelleTache';
-		newTache.className = 'notif';
-
-		newTache.innerHTML = `<h4 class='notifTexte' id='notifTexte'>${contenu}</h4>`;
 	/*	if (newTache) {
-			var derniereNotif = document.getElementById('task-content');
-			var element_parent = document.getElementById('toutes_notif');
+			let derniereNotif = document.getElementById('task-content');
+			let element_parent = document.getElementById('toutes_notif');
 
 			element_parent.insertBefore(newTache, derniereNotif);
 			} else{};
 
-		var derniereNotif = document.getElementById('task_content');
-		var element_parent = document.getElementById("toutes_notif");
+		let derniereNotif = document.getElementById('task_content');
+		let element_parent = document.getElementById("toutes_notif");
 
 		element_parent.insertBefore(newTache, task_content); */
 
-		Tasks.insert({
-			name: contenu,
-			descr: contenu,
-			points: points,
-			service: true,
-			gage: true,
-			pending: false,
-			createdAt: new Date(),
-			checked: false
-		});
+	Tasks.insert({
+		name: contenu,
+		descr: contenu,
+		points: points,
+		service: true,
+		gage: true,
+		pending: false,
+		createdAt: new Date(),
+		checked: false
+	});
 
-		Meteor.call(
-			'creatTache'
+	Meteor.call(
+		'creatTache'
 		);
 	}
 });
@@ -94,78 +92,60 @@ Template.taskItem.events({
 		Tasks.update(this._id, {$set:{checked: !this.checked}});
 		// document.getElementById(task_content).style.visibility = 'hidden';
 	},
-
 	'click .delete': function(){
 		Tasks.remove(this._id);
 	}
-
 });
 
 //compte a rebours
 Template.taskItem.events({
 	'click #compteur':function(){
-
-		var duree = Number(prompt('Entrez le nombre de jour avant de la refaire:')*3600*24);
-
-            function t(){
-                var compteur=document.getElementById('compteur');
-                s=duree;
-                m=0;h=0;j=0;
-
-
-                if(s<0){
-                    compteur.innerHTML="terminé<br/>"+"<a href=tasks_list.js>continuer</a>"
-                }
-                else{
-                    if(s>59){
-                        m=Math.floor(s/60);
-                        s=s-m*60
-                    }
-                    if(m>59){
-                        h=Math.floor(m/60);
-                        m=m-h*60
-                    }
-                    if(s<10){
-                        s="0"+s
-                    }
-                    if(m<10){
-                        m="0"+m
-                    }
-                    if(h>23){
-                        j=Math.floor(h/24);
-                        h=h-j*24
-                    }
-                    if(h<10){
-                        h="0"+h
-                    }
-
-                    compteur.innerHTML= j + ":" + h + ":" + m + ":" + s;
-                }
-                duree=duree-1;
-                window.setTimeout("t();",999);
+  		let duree = Number(prompt('Entrez le nombre de jour avant de la refaire:')*3600*24);
+      function t(){
+          let compteur=document.getElementById('compteur');
+          s=duree;
+          m=0;h=0;j=0;
+          if(s<0){
+              compteur.innerHTML="terminé<br/>"+"<a href=tasks_list.js>continuer</a>"
+          }
+          else{
+            if(s>59){
+                m=Math.floor(s/60);
+                s=s-m*60;
             }
-            t();
+            if(m>59){
+                h=Math.floor(m/60);
+                m=m-h*60;
+            }
+            if(s<10){
+                s="0"+s;
+            }
+            if(m<10){
+                m="0"+m;
+            }
+            if(h>23){
+                j=Math.floor(h/24);
+                h=h-j*24;
+            }
+            if(h<10){
+                h="0"+h;
+            }
+            compteur.innerHTML= j + ":" + h + ":" + m + ":" + s;
+          }
+          duree=duree-1;
+          window.setTimeout("t();",999);
+      }
+      t();
 	}
 });
 
-
-
-
-
-
-
-var countdown = new ReactiveCountdown(5);
-
+let countdown = new ReactiveCountdown(5);
 countdown.start(function() {
-
    alert('c est fini');
-
 });
 
 Template.car.helpers({
-
     getCountdown: function() {
         return countdown.get();
     }
-
 });
