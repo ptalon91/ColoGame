@@ -15,32 +15,37 @@ Le public cible d'une telle application sont des personnes à priori jeunes et v
 
 Technologies
 ------------
-  ColoGame a été développé avec le framework de développement web en Javascript *Meteor* dans sa version 1.4.3.  
+  ColoGame a été développé avec le framework de développement web en Javascript *Meteor* dans sa version 1.4.4.  
 
   Les principaux modules Meteor utilisés dans ce projet sont :
-  - mongol
-  - ironrouter
-  - accounts
-  - bootstrap3
-  - collection
+  - mongol/minimongo (gestion des bases de données)
+  - blaze (template HTML)
+  - iron:router (redirection des pages)
+  - accounts (création d'utilisateur avec mot de passe)
+  - bootstrap (mise en page css)
+  - underscore (collection de helpers)
+  - flyandi (compte à rebours)
 
-
-Métodologie
+Méthodologie
 ----------
-  **Etapes**
+  **Ci dessous les différentes étapes d'une utilisation de base de CocoGame**
 
-    - système de count
-    - utilisateur
-    - taches
-    - notifications
-    - système de points
-    - système attribué des taches à ceux qui ont le moins de points
-    - système de conteur
-
+1. L'utilisateur arrive sur la page d'accueil et peut se loguer ou créer un nouvel utilisateur avec un mot de passe.
+2. S'il n'est pas encore affilié à une colocation (groupe d'utilisateurs), il arrivera sur une page pour rejoindre une 'coloc' ou créer une 'coloc'.
+3. Sur la page principale, l'utilisateur peut voir le classement de sa 'coloc' lié aux nombres de points de tous ses colocataires, ainsi que les notifications des dernières tâches effectuées par lui ou ses colocataires et le nombre de points attribués.
+4. Le boutton 'Tasks' permet de d'ouvrir la page où l'utilisateur va pouvoir sélectionner une tâche et confirmer qu'elle a bien été exécutée pour recevoir les points correspondants.
+5. Il est possible de créer des tâches et de leur assigner un temps limite à leur exécution, les utilisateurs avec le moins de points vont se voir attribuer les tâches qu'aucun autre colocataire n'a voulu accomplir.
 
 Discussion
 ------------------------
-difficultées rencontrées et améliorations possibles
+*Meteor* est un framework de développement web très puissant. Il permet de développement avec mise à jour visualisation en temps réel. L'implémentation de modules ou 'packages', ainsi que leur documentation disponible sur le web, offre de nombreuses possibilités et diminue le temps de développement d'une application comme *ColoGame*. Cependant, le code est peut être moins intuitif et nécessite un temps d'adptation préalable relativement conséquent, surtout si plusieurs modules s'imbriquent entre eux.
+
+*Github* a été utilisé pour la gestion du développement de l'application, cet outil permet de sauvegarder les différentes phases du projet et de développer en parallèle certains segement du projet en plusieurs 'branches' pour ensuite fusionner ces dernières sur une 'branche' principale. Ce gestionnaire de développement est certes très pratique avoir un backup de du projet, mais nécessite aussi une bonne connaissance des possibilités et commandes existantes lors d'une utilisation plus poussée.
+
+Améliorations
+------------------------
+
+
 
 Conclusion
 ----------
