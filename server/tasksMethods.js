@@ -16,10 +16,17 @@ Meteor.methods({
 	},
 
 	// Creates a task when user clicks on the add task button.
-	creatTache(task_points, task_descr){
+	createTask(current_colocName, current_username, user_task_name, user_task_points){
 		Tasks.insert({
-		  text: 'Tâche: ' + task_descr + ', ' + 'Points: ' + task_points,
-		  createdAt: new Date()
+			coloc: current_colocName,
+			author: current_username,
+			name: user_task_name,
+			descr: user_task_name,
+			points: user_task_points,
+			service: true,
+			pending: false,
+			createdAt: new Date(),
+			checked: false
 		})
 	}
 });
