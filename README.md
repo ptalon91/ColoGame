@@ -38,9 +38,9 @@ Méthodologie
 
 Discussion
 ------------------------
-*Meteor* est un framework de développement web très puissant. Il permet de développement avec mise à jour visualisation en temps réel. L'implémentation de modules ou 'packages', ainsi que leur documentation disponible sur le web, offre de nombreuses possibilités et diminue le temps de développement d'une application comme *ColoGame*. Cependant, le code est peut être moins intuitif et nécessite un temps d'adptation préalable relativement conséquent, surtout si plusieurs modules s'imbriquent entre eux.
+*Meteor* est un framework de développement web très puissant. Il permet de développement avec mise à jour visualisation en temps réel. L'implémentation de modules ou 'packages', ainsi que leur documentation disponible sur le web, offre de nombreuses possibilités et diminue le temps de développement d'une application comme *ColoGame*. Cependant, le code est peut être moins intuitif et nécessite un temps d'adaptation préalable relativement conséquent, surtout si plusieurs modules s'imbriquent entre eux.
 
-*Github* a été utilisé pour la gestion du développement de l'application, cet outil permet de sauvegarder les différentes phases du projet et de développer en parallèle certains segement du projet en plusieurs 'branches' pour ensuite fusionner ces dernières sur une 'branche' principale. Ce gestionnaire de développement est certes très pratique avoir un backup de du projet, mais nécessite aussi une bonne connaissance des possibilités et commandes existantes lors d'une utilisation plus poussée.
+*Github* a été utilisé pour la gestion du développement de l'application, cet outil permet de sauvegarder les différentes phases du projet et de développer en parallèle certains segments du projet en plusieurs 'branches' pour ensuite fusionner ces dernières sur une 'branche' principale. Ce gestionnaire de développement est certes très pratique avoir un backup de du projet, mais nécessite aussi une bonne connaissance des possibilités et commandes existantes lors d'une utilisation plus poussée.
 
 Améliorations
 ------------------------
