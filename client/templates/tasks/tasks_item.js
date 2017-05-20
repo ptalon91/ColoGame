@@ -1,3 +1,8 @@
+// Helper for the tasksItem template. Returns tasks that are non admin.
+Template.taskItem.helpers({
+  check_if_admin: function () { return this.author != 'admin' }
+})
+
 Template.taskItem.events({
 	'click .ckeck': function(){
 		Tasks.update(this._id, {$set:{checked: !this.checked}});
@@ -5,7 +10,8 @@ Template.taskItem.events({
 	},
 
 	'click .delete': function(){
-		Tasks.remove(this._id);
+		
+    Tasks.remove(this._id);
 	},
 
 	//compte a rebours
