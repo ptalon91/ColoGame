@@ -28,16 +28,5 @@ Meteor.methods({
 			createdAt: new Date(),
 			checked: false
 		})
-	},
-
-	// Remove task.
-	removeTask(task_id){
-		Tasks.remove(task_id);
-	},
-
-	// Update task.
-	updateTask(task_id, task_checked){
-		Tasks.update(task_id, {$set:{checked: !task_checked}});
 	}
-
 });

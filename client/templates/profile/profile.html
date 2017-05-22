@@ -3,29 +3,23 @@
 		<!-- Profile image is not reactive yet. It should later be uploaded by the user and be loaded after login.-->
 		<!-- #if currentUser return the current user, allowing to get his own data. -->
 		{{#if currentUser}}
+		<div class="col-sm-3">
+				<div class="row">
+					<img class="img-responsive img-rounded" src="/data/profile_pic.png" style="margin-left: -1em;"/>
+					<ul class="list-unstyled">
+		   				<!-- Returns username and points fields of the current user and include into HTML. -->
+		   				<li><h3>{{currentUser.username}}</h3></li>
+		   				<li><h3>{{currentUser.points}} points</h3></li>
+						<li><h3>{{currentUser.colocName}} Coloc</h3></li>
+		   			</ul>
+	   			</div>
+		</div>
 
-			{{#if check_if_coloc}}
-
-				{{>createColoc}}
-
-			{{else}}
-				<div class="col-sm-3">
-						<div class="row">
-							<img class="img-responsive img-rounded" src="/data/profile_pic.png" style="margin-left: -1em;"/>
-							<ul class="list-unstyled">
-				   				<!-- Returns username and points fields of the current user and include into HTML. -->
-				   				<li><h3>{{currentUser.username}}</h3></li>
-				   				<li><h3>{{currentUser.points}} points</h3></li>
-								<li><h3>{{currentUser.colocName}} Coloc</h3></li>
-				   			</ul>
-			   			</div>
-				</div>
-
-				<div>
-			   		{{#each notifs}}
-						{{> notifItem}}
-					{{/each}}
-				</div>			
+		<div>
+	   		{{#each notifs}}
+				{{> notifItem}}
+			{{/each}}
+		</div>			
 	 <!--  		<div class="notif" id="afaire">
 	   			<h4 class="notifTexte">Tâches à faire.</h4>
 	   		</div>
@@ -41,8 +35,6 @@
 	   		<div class="notif" id="effetuees">
 	   			<h4 class="notifTexte">Tâches effectuées.</h4>
 	   		</div> -->
-
-	   		{{/if}}
 		{{/if}}
 	</div>
 </template>
