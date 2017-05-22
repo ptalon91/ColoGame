@@ -4,14 +4,22 @@ Template.taskItem.helpers({
 })
 
 Template.taskItem.events({
+
+  // Call update task method (located in the server) when user clicks on the check box.
 	'click .ckeck': function(){
-		Tasks.update(this._id, {$set:{checked: !this.checked}});
-		// document.getElementById(task_content).style.visibility = 'hidden';
+    Meteor.call(
+      'updateTask',
+      this._id,
+      this.checked
+    );
 	},
 
+  // Call remove task method (located in the sevrer) when user clicks on "supprimer".
 	'click .delete': function(){
-		
-    Tasks.remove(this._id);
+    Meteor.call(
+      'removeTask',
+      this._id
+    );
 	},
 
 	//compte a rebours
