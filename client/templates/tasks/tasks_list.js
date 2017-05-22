@@ -2,7 +2,10 @@
 Template.tasksList.helpers({
 	tasks: function() {
 		return Tasks.find({"$or": [{coloc: Meteor.user().colocName}, {coloc: "global"}]});
-	}
+	},
+
+	//Checks if current user's colocName field equals null.
+	check_if_coloc: function () { return Meteor.user().colocName == null }
 });
 
 // Event for the tasksList template.

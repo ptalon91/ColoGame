@@ -20,13 +20,15 @@
       </ul>
 
       {{#if currentUser}}
-        <ul class="nav navbar-nav navbar-right">
-            <a class="navbar-brand" href="{{pathFor 'coloc'}}"><small>My Coloc</small></a>
-        </ul>
+        {{#if check_if_coloc}}
+          <ul class="nav navbar-nav navbar-right">
+              <a class="navbar-brand" href="{{pathFor 'coloc'}}"><small>My Coloc</small></a>
+          </ul>
 
-        <ul class="nav navbar-nav navbar-right">
-            <a class="navbar-brand" href="{{pathFor 'tasksList'}}"><small>Tasks</small></a>
-        </ul>
+          <ul class="nav navbar-nav navbar-right">
+              <a class="navbar-brand" href="{{pathFor 'tasksList'}}"><small>Tasks</small></a>
+          </ul>
+        {{/if}}
       {{/if}}
       
     </div>  
