@@ -9,7 +9,7 @@ Semestre de Printemps 2017
 
 Introduction
 ------------
-ColocGame est une application qui rend les tâches ménagères en colocation plus ludiques. Le principe étant de gagner des points en réalisant les tâches quotidiennes. Chaque tâche possède un compte à rebours, moins les joueurs ont de points plus ils risquent de se voir assigner les tâches que personne ne veut faire.  
+ColocGame est une application qui rend les tâches ménagères en colocation plus ludiques. Le principe étant de gagner des points en réalisant les tâches quotidiennes. Chaque tâche possède un compte à rebours, moins les joueurs ont des points plus ils risquent de se voir assigner les tâches que personne ne veut faire.  
 
 Le public cible d'une telle application sont des personnes à priori jeunes et vivant en colocation qui doivent se répartir les corvées ménagères. ColoGame se veut ludique car le but est de faire avant ses colocataires les tâches les moins pénibles pour laisser les plus paresseux se voir attribuer les tâches les plus déagréables tout en participant à la vie communautaire du ménage. Grâce à l'application, les colocataires se responsabilisent et cela doit normalement éviter le laxisme de certain, tout réduisant les conflits liés à l'attribution des tâches.
 
@@ -38,7 +38,7 @@ Méthodologie
 
 Discussion
 ------------------------
-*Meteor* est un framework de développement web très puissant. Il permet de développement avec mise à jour visualisation en temps réel. L'implémentation de modules ou 'packages', ainsi que leur documentation disponible sur le web, offre de nombreuses possibilités et diminue le temps de développement d'une application comme *ColoGame*. Cependant, le code est peut être moins intuitif et nécessite un temps d'adaptation préalable relativement conséquent, surtout si plusieurs modules s'imbriquent entre eux.
+*Meteor* est un framework de développement web très puissant. Il permet le développement avec mise à jour visualisation en temps réel. L'implémentation de modules ou 'packages', ainsi que leur documentation disponible sur le web, offre de nombreuses possibilités et diminue le temps de développement d'une application comme *ColoGame*. Cependant, le code est peut être moins intuitif et nécessite un temps d'adaptation préalable relativement conséquent, surtout si plusieurs modules s'imbriquent entre eux.
 
 *Github* a été utilisé pour la gestion du développement de l'application, cet outil permet de sauvegarder les différentes phases du projet et de développer en parallèle certains segments du projet en plusieurs 'branches' pour ensuite fusionner ces dernières sur une 'branche' principale. Ce gestionnaire de développement est certes très pratique avoir un backup de du projet, mais nécessite aussi une bonne connaissance des possibilités et commandes existantes lors d'une utilisation plus poussée.
 
@@ -49,4 +49,12 @@ Améliorations
 
 Conclusion
 ----------
-  ce qui a été accompli
+  ce qui a été accompli....
+  
+  
+  
+  Un aspect que l'on aurait voulu développer sur le site de Collocgame est le fait d'attribuer des gages aux personnes qui auraient été en retard avec les tâches...
+  
+  
+
+---------
