@@ -9,4 +9,4 @@ Template.notifsList.helpers({
 // 	if(currentUser.points < user.points){
 // 		alert(Attention êtes le dernier du classement, accomplissez une tâche pour ne pas recevoir de gage.);
 // 	}
-// });
+// })
