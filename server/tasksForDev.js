@@ -10,8 +10,7 @@ if (Tasks.find().count() === 0) {
     service: true,
     pending: false,
     createdAt: new Date(),
-    checked: false,
-    tasksDoneDate: null
+    checked: false
   });
 
   Tasks.insert({
@@ -23,8 +22,7 @@ if (Tasks.find().count() === 0) {
     service: false,
     pending: false,
     createdAt: new Date(),
-    checked: false,
-    tasksDoneDate: null
+    checked: false
   });
 
   Tasks.insert({
@@ -36,8 +34,7 @@ if (Tasks.find().count() === 0) {
     service: true,
     pending: false,
     createdAt: new Date(),
-    checked: false,
-    tasksDoneDate: null
+    checked: false
   });
 
   Tasks.insert({
@@ -49,8 +46,7 @@ if (Tasks.find().count() === 0) {
     service: true,
     pending: false,
     createdAt: new Date(),
-    checked: false,
-    tasksDoneDate: null
+    checked: false
   });
 
 
@@ -63,8 +59,7 @@ if (Tasks.find().count() === 0) {
     service: true,
     pending: false,
     createdAt: new Date(),
-    checked: false,
-    tasksDoneDate: null
+    checked: false
   });
 
   Tasks.insert({
@@ -76,8 +71,7 @@ if (Tasks.find().count() === 0) {
     service: true,
     pending: false,
     createdAt: new Date(),
-    checked: false,
-    tasksDoneDate: null
+    checked: false
   });
 
   Tasks.insert({
@@ -89,7 +83,6 @@ if (Tasks.find().count() === 0) {
     service: false,
     pending: false,
     createdAt: new Date(),
-    checked: false,
-    tasksDoneDate: null
+    checked: false
   });
 }

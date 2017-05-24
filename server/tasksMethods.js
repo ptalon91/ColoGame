@@ -11,8 +11,7 @@ Meteor.methods({
 		Notifs.insert({
 			text: current_username + " a " + task_descr+ " et gagne " + task_points + " points!",
 			colocName: current_colocName,
-			createdAt: new Date(),
-			tasksDoneDate: null
+			createdAt: new Date()
 		})
 	},
 
@@ -27,8 +26,7 @@ Meteor.methods({
 			service: true,
 			pending: false,
 			createdAt: new Date(),
-			checked: false,
-			tasksDoneDate: null
+			checked: false
 		})
 	},
 
@@ -40,7 +38,6 @@ Meteor.methods({
 	// Update task.
 	updateTask(task_id, task_checked){
 		Tasks.update(task_id, {$set:{checked: !task_checked}});
-		Tasks.update(task_id, {$set:{tasksDoneDate: new Date()}});
 	}
 
 });
