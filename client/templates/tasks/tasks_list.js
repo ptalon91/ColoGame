@@ -112,7 +112,7 @@ Template.taskItem.helpers({
 
 
 
-// https://atmospherejs.com/flyandi/reactive-countdown
+/* https://atmospherejs.com/flyandi/reactive-countdown
 var countdown = new ReactiveCountdown(5);
 
 countdown.start(function() {
@@ -126,5 +126,5 @@ Template.car.helpers({
     getCountdown: function() {
         return countdown.get();
     }
-});
+});*/
 
