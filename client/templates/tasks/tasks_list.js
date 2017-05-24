@@ -53,30 +53,35 @@ Template.tasksList.events({
 		});
 	},
 
-	//ajouter une nouvelle tache
 	'click #add_tache': function(){
-	    var user_task_name = prompt('Entrez le nom de la tâche');
-	    
-		if(user_task_name != null && user_task_name.trim() != '') {			//ne peut pas être nulle
-			var user_task_points = prompt('Entrez le nombre de points');
+	    let user_task_name = prompt('Entrez le nom de la tâche');
+	    let user_task_points = Number(prompt('Entrez le nombre de points'));
+		/*let newTache = document.createElement('div');
+			
+		newTache.id = 'nouvelleTache';
+		newTache.className = 'notif';
+		newTache.innerHTML = `<h4 class='notifTexte' id='notifTexte'>${contenu}</h4>`;*/
 
-			if(user_task_points != null && user_task_points.trim() != ''){	//ne peut pas être nulle
-				Meteor.call(
-					'createTask',
-					Meteor.user().colocName,
-					Meteor.user().username,
-					user_task_name,
-					user_task_points
-				);
-			} else{
- 				alert('Aucune information');
- 			  }
+	/*	if (newTache) {
+			let derniereNotif = document.getElementById('task-content');
+			let element_parent = document.getElementById('toutes_notif');
 
-		} else{
- 			alert('Aucune information');
- 		  }
- 	},
- 	
+			element_parent.insertBefore(newTache, derniereNotif);
+			} else{};
+
+		let derniereNotif = document.getElementById('task_content');
+		let element_parent = document.getElementById("toutes_notif");
+
+		element_parent.insertBefore(newTache, task_content); */
+
+		Meteor.call(
+			'createTask',
+			Meteor.user().colocName,
+			Meteor.user().username,
+			user_task_name,
+			user_task_points
+		);
+	},
 
 
 	'click .delete': function(){
@@ -85,9 +90,12 @@ Template.tasksList.events({
 
 });
 
-Template.taskItem.helpers({
-	check: function(){
-			 let date_completion = Tasks.find(this._id).fetch()[0].tasksDoneDate;
+//faire disparaître les taches effectuées sans compteur
+Template.taskItem.events({
+	'click #checkbutton': function(){
+			
+
+			 /*let date_completion = Tasks.find(this._id, this.checked).fetch()[0].tasksDoneDate;
 			 let maintenant = new Date();
 			 let difference = (maintenant.getTime() - date_completion.getTime())/ (1000 * 3600 * 24);// différence entre date de complétion et maintenant >= 3 jours
 			 console.log(date_completion);
@@ -98,10 +106,31 @@ Template.taskItem.helpers({
 				"this".style.visibility = "hidden";
 			 }
 
-			 return Tasks.find();
+			 return Tasks.find();*/
+
+			 var text = document.getElementById('notiftext');
+			 //var text2 = Tasks.find(_id);
+			 
+			 
+
+			  if (this.checked === true){
+				text.style.visibility = "visible";
+			 } else {
+				text.style.visibility = "hidden";
+			 }
 	}
 
 });
+
+
+
+Template.taskItem.helpers({
+    tasks1() {
+        // On récupère la première ligne de la collection Counter
+        return console.log(Tasks.findOne().value);
+    }
+});
+
 
 
 
