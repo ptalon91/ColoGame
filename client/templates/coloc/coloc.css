@@ -1,32 +1,29 @@
 .notif{
 	width: 60%;
-	height: 100px;
 	text-align: center;
-	margin-left: 35%;
-	border-radius: 15px;
-	background-color: #E7E7E7;
-	transition: 0.5s;
+	margin-left: 15%;
+	border-radius: 5px;
+	background-color: rgba(150,209,255,0.4);
 }
 .notif:hover{
-	background-color: rgba(145, 255, 213, 0.4);
 	box-shadow: 0px 0px 5px black;
 	transition: background-color 0.5s, box-shadow 0.5s;
 }
-.notifText{
-	padding-top: 20px;
+
+.jumbotron
+{
+		background-color : rgba(150,209,255,0.4);
+    text-align: center;
 }
+
 /*le bouton pour ajouter une tache dans tasks*/
 #add_tache{
 	width: 60%;
-	height: 30px;
 	text-align: center;
-	margin-bottom: 4%;
-	border-radius: 15px;
-	background-color: rgba(145, 255, 213, 0.4);
-	transition: 0.5s;
+	border-radius: 5px;
+	background-color: rgba(150,209,255,0.4);
 }
 #add_tache:hover{
-	background-color: rgba(145, 255, 213, 0.4);
 	box-shadow: 0px 0px 5px black;
 	transition: background-color 0.5s, box-shadow 0.5s;
 }
@@ -36,33 +33,26 @@
 /*le bouton pour supprimer les notif*/
 .delete{
 	float: right;
-	width: 150px;
-	height: 50px;
-	margin-top: 15px;
-	border-radius: 15px;
-	background-color: rgba(255, 000, 000, 0.5);
-	color: white; 
+	text-align: center;
+	width: 120px;
+	border-radius: 5px;
+	background-color: rgba(255, 128, 108, 0.6);
+	color: white;
 	transition: background-color 0.5s, box-shadow 0.5s;
 }
 .delete:hover{
 	box-shadow: 0px 0px 5px black;
-	background-color: rgba(255, 000, 000, 0.7);
+	background-color: rgba(255, 88, 84, 0.7);
 	transition: background-color 0.5s, box-shadow 0.5s;
 }
 /*les taches à faire sur mon profile*/
 #afaire{
 	padding-top: 25px;
 	margin-top: 15px;
-	background-color: rgba(145, 255, 213, 0.4);
+	background-color: rgba(150,209,255,0.4);
 }
 #effetuees{
 	padding-top: 25px;
 	margin-top: 15px;
-	background-color: rgba(255, 000, 000, 0.5);
+	background-color: rgba(255, 88, 84, 0.6);
 }
-
-
-
-
-
-
