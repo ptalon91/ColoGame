@@ -54,3 +54,8 @@
 	margin-top: 15px;
 	background-color: rgba(255, 88, 84, 0.6);
 }
+#notifitem{
+	background-color: #4682B4;
+	color: orange;
+	border-radius: 20px;
+}
