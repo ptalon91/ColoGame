@@ -126,3 +126,13 @@ Template.taskItem.helpers({
 
 });
 
+//compte a rebours
+
+Template.taskItem.events({
+	'click #compteur':function(){
+
+		var debut = new Date();
+		var nbrjour = Number(prompt("Entrez le nombre de jour qu'il faut avant de refaire un tache!"));
+		debut.setTime()
+	}
+});
