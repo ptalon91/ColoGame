@@ -83,3 +83,95 @@ Template.tasksList.events({
 		);
 	},
 });
+
+	'click .delete': function(){
+		Tasks.remove(this._id);
+	}
+
+});
+
+Template.taskItem.helpers({
+	check: function(){
+			 let date_completion = Tasks.find(this._id).fetch()[0].tasksDoneDate;
+			 let maintenant = new Date();
+			 let difference = (maintenant.getTime() - date_completion.getTime())/ (1000 * 3600 * 24);// différence entre date de complétion et maintenant >= 3 jours
+			 console.log(date_completion);
+
+			 if (difference >= 3){
+				"this".style.visibility = "visible";
+			 } else {
+				"this".style.visibility = "hidden";
+			 }
+
+			 return Tasks.find();
+	}
+
+});
+
+//compte a rebours
+Template.taskItem.events({
+	'click #compteur':function(){
+
+		var duree = Number(prompt('Entrez le nombre de jour avant de la refaire:')*3600*24);
+
+            function t(){
+                var compteur=document.getElementById('compteur');
+                s=duree;
+                m=0;h=0;j=0;
+
+
+                if(s<0){
+                    compteur.innerHTML="terminé<br/>"+"<a href=tasks_list.js>continuer</a>"
+                }
+                else{
+                    if(s>59){
+                        m=Math.floor(s/60);
+                        s=s-m*60
+                    }
+                    if(m>59){
+                        h=Math.floor(m/60);
+                        m=m-h*60
+                    }
+                    if(s<10){
+                        s="0"+s
+                    }
+                    if(m<10){
+                        m="0"+m
+                    }
+                    if(h>23){
+                        j=Math.floor(h/24);
+                        h=h-j*24
+                    }
+                    if(h<10){
+                        h="0"+h
+                    }
+
+                    compteur.innerHTML= j + ":" + h + ":" + m + ":" + s;
+                }
+                duree=duree-1;
+                window.setTimeout("t();",999);
+            }
+            t();
+	}
+});
+
+
+
+
+
+
+// https://atmospherejs.com/flyandi/reactive-countdown
+var countdown = new ReactiveCountdown(5);
+
+countdown.start(function() {
+
+ //  alert('c est fini');
+
+});
+
+Template.car.helpers({
+
+    getCountdown: function() {
+        return countdown.get();
+    }
+});
