@@ -1,3 +1,11 @@
+.task{
+	width: 60%;
+	text-align: center;
+	margin-left: 15%;
+	border-radius: 5px;
+	background-color: rgba(150,209,255,0.4);
+}
+
 .notif{
 	width: 60%;
 	text-align: center;
