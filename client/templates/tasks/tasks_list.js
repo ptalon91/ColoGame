@@ -109,15 +109,18 @@ Template.taskItem.events({
 			 return Tasks.find();*/
 
 			 var text = document.getElementById('notiftext');
+			 var text2 = this._id;
+			 console.log(text2);
+
 			 //var text2 = Tasks.find(_id);
 			 
 			 
 
-			  if (this.checked === true){
-				text.style.visibility = "visible";
-			 } else {
-				text.style.visibility = "hidden";
-			 }
+			//  if (this.checked === true){
+			//	text.style.visibility = "visible";
+			 //} else {
+			//	text.style.visibility = "hidden";
+			 //}
 	}
 
 });
@@ -125,7 +128,7 @@ Template.taskItem.events({
 
 
 Template.taskItem.helpers({
-    tasks1() {
+    tasks: function() {
         // On récupère la première ligne de la collection Counter
         return console.log(Tasks.findOne().value);
     }
