@@ -54,35 +54,30 @@ Template.tasksList.events({
 		});
 	},
 
+	//ajouter une nouvelle tache
 	'click #add_tache': function(){
-	    let user_task_name = prompt('Entrez le nom de la tâche');
-	    let user_task_points = Number(prompt('Entrez le nombre de points'));
-		/*let newTache = document.createElement('div');
-			
-		newTache.id = 'nouvelleTache';
-		newTache.className = 'notif';
-		newTache.innerHTML = `<h4 class='notifTexte' id='notifTexte'>${contenu}</h4>`;*/
+	    var user_task_name = prompt('Entrez le nom de la tâche');
+	    
+		if(user_task_name != null && user_task_name.trim() != '') {			//ne peut pas être nulle
+			var user_task_points = prompt('Entrez le nombre de points');
 
-	/*	if (newTache) {
-			let derniereNotif = document.getElementById('task-content');
-			let element_parent = document.getElementById('toutes_notif');
+			if(user_task_points != null && user_task_points.trim() != ''){	//ne peut pas être nulle
+				Meteor.call(
+					'createTask',
+					Meteor.user().colocName,
+					Meteor.user().username,
+					user_task_name,
+					user_task_points
+				);
+			} else{
+ 				alert('Aucune information');
+ 			  }
 
-			element_parent.insertBefore(newTache, derniereNotif);
-			} else{};
-
-		let derniereNotif = document.getElementById('task_content');
-		let element_parent = document.getElementById("toutes_notif");
-
-		element_parent.insertBefore(newTache, task_content); */
-
-		Meteor.call(
-			'createTask',
-			Meteor.user().colocName,
-			Meteor.user().username,
-			user_task_name,
-			user_task_points
-		);
-	},
+		} else{
+ 			alert('Aucune information');
+ 		  }
+ 	},
+ 	
 
 
 	'click .delete': function(){

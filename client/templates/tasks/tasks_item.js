@@ -64,7 +64,7 @@ Template.taskItem.events({
 });
 
 
-let countdown = new ReactiveCountdown(5);
+/*let countdown = new ReactiveCountdown(5);
 countdown.start(function() {
    alert('c est fini');
 });
@@ -73,4 +73,4 @@ Template.car.helpers({
     getCountdown: function() {
         return countdown.get();
     }
-});
+});*/
