@@ -1,12 +1,6 @@
 <template name="taskItem">
 	<div class="task">
-		<label for="test" class="ckeck" id="checkbutton">
-			<input type="checkbox" checked="{{checked}}" >
-			<span class="span1"></span>						<!--aussi compliqué pour le css-->
-			Cette tâche a été faite.
-		</label>
-
-		<div class="task text-center well well-sm col-sm-8" id="add_tache">
+		<div class="task text-center well well-sm col-sm-12" id="task_content">
 			{{#if check_if_admin}}
 				<button class="delete"><b>Supprimer</b></button>
 			{{/if}}
