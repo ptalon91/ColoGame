@@ -1,11 +1,8 @@
-// Helper for the tasksList template. Returns global and current coloc's tasks from the database and assign it to "tasks"
+// Helper for the tasksList template. Returns every tasks from the database and assign it to "tasks"
 Template.tasksList.helpers({
 	tasks: function() {
-		return Tasks.find({"$or": [{coloc: Meteor.user().colocName}, {coloc: "global"}]});
-	},
-
-	//Checks if current user's colocName field equals null.
-	check_if_coloc: function () { return Meteor.user().colocName == null }
+		return Tasks.find();
+	}
 });
 
 // Event for the tasksList template.
@@ -13,7 +10,6 @@ Template.tasksList.helpers({
 // For current user, and for the clicked task's number of points.
 Template.tasksList.events({
 	'click #task_content': function(){
-		
 		// Parameters...
 		let task_points = this.points;
 		let task_descr = this.descr;
@@ -46,40 +42,87 @@ Template.tasksList.events({
 					task_points,
 					task_descr
 				);
-				
+
 				// After confirmation, redirect to coloc page.
 				Router.go('coloc');
 			}
 		});
-	},
+	}
+});
 
+Template.tasksList.events({
 	'click #add_tache': function(){
-	    let user_task_name = prompt('Entrez le nom de la tâche');
-	    let user_task_points = Number(prompt('Entrez le nombre de points'));
-		/*let newTache = document.createElement('div');
-			
+	    var contenu = prompt('Entrez le nom de la tâche');
+	    var points = Number(prompt('Entrez le nombre de points'));
+
+		var newTache = document.createElement('div');
 		newTache.id = 'nouvelleTache';
 		newTache.className = 'notif';
-		newTache.innerHTML = `<h4 class='notifTexte' id='notifTexte'>${contenu}</h4>`;*/
 
+		newTache.innerHTML = `<h4 class='notifTexte' id='notifTexte'>${contenu}</h4>`;
 	/*	if (newTache) {
-			let derniereNotif = document.getElementById('task-content');
-			let element_parent = document.getElementById('toutes_notif');
+			var derniereNotif = document.getElementById('task-content');
+			var element_parent = document.getElementById('toutes_notif');
 
 			element_parent.insertBefore(newTache, derniereNotif);
 			} else{};
 
-		let derniereNotif = document.getElementById('task_content');
-		let element_parent = document.getElementById("toutes_notif");
+		var derniereNotif = document.getElementById('task_content');
+		var element_parent = document.getElementById("toutes_notif");
 
 		element_parent.insertBefore(newTache, task_content); */
 
+		Tasks.insert({
+			name: contenu,
+			descr: contenu,
+			points: points,
+			service: true,
+			gage: true,
+			pending: false,
+			createdAt: new Date(),
+			checked: false,
+			tasksDoneDate: null,
+		});
+
 		Meteor.call(
-			'createTask',
-			Meteor.user().colocName,
-			Meteor.user().username,
-			user_task_name,
-			user_task_points
+			'creatTache',
 		);
-	},
+	}
 });
+
+Template.taskItem.events({
+	'click .ckeck': function(){
+		Tasks.update(this._id, {$set:{checked: !this.checked}});
+		Tasks.update(this._id, {$set:{tasksDoneDate: new Date()}});
+		// pour chaque élément
+		// vérifier s'il y a une date de complétion sur l'élément COURANT (THIS)
+			// si non (=== null) => afficher
+			// si oui
+				
+				
+	},
+
+	'click .delete': function(){
+		Tasks.remove(this._id);
+	}
+
+});
+
+Template.taskItem.helpers({
+	check: function(){
+			 let date_completion = Tasks.find(this._id).fetch()[0].tasksDoneDate;
+			 let maintenant = new Date();
+			 let difference = (maintenant.getTime() - date_completion.getTime())/ (1000 * 3600 * 24);// différence entre date de complétion et maintenant >= 3 jours
+			 console.log(date_completion);
+
+			 if (difference >= 3){
+				"this".style.visibility = "visible";
+			 } else {
+				"this".style.visibility = "hidden";
+			 }
+
+			 return Tasks.find();
+	}
+
+});
+
