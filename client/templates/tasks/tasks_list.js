@@ -40,7 +40,6 @@ Template.tasksList.events({
 				// Call method on server to create a notification.
 				Meteor.call(
 					'createNotif',
-					Meteor.userId(),
 					Meteor.user().colocName,
 					Meteor.user().username,
 					Meteor.user().points,
@@ -122,4 +121,21 @@ Template.car.helpers({
         return countdown.get();
     }
 });*/
+		/*let newTache = document.createElement('div');
+			
+		newTache.id = 'nouvelleTache';
+		newTache.className = 'notif';
+		newTache.innerHTML = `<h4 class='notifTexte' id='notifTexte'>${contenu}</h4>`;*/
+
+	/*	if (newTache) {
+			let derniereNotif = document.getElementById('task-content');
+			let element_parent = document.getElementById('toutes_notif');
+
+			element_parent.insertBefore(newTache, derniereNotif);
+			} else{};
+
+		let derniereNotif = document.getElementById('task_content');
+		let element_parent = document.getElementById("toutes_notif");
+
+		element_parent.insertBefore(newTache, task_content); */
 
