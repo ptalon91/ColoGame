@@ -40,6 +40,7 @@ Template.tasksList.events({
 				// Call method on server to create a notification.
 				Meteor.call(
 					'createNotif',
+					Meteor.userId(),
 					Meteor.user().colocName,
 					Meteor.user().username,
 					Meteor.user().points,
@@ -82,4 +83,48 @@ Template.tasksList.events({
 			user_task_points
 		);
 	},
+
+
+	'click .delete': function(){
+		Tasks.remove(this._id);
+	}
+
 });
+
+Template.taskItem.helpers({
+	check: function(){
+			 let date_completion = Tasks.find(this._id).fetch()[0].tasksDoneDate;
+			 let maintenant = new Date();
+			 let difference = (maintenant.getTime() - date_completion.getTime())/ (1000 * 3600 * 24);// différence entre date de complétion et maintenant >= 3 jours
+			 console.log(date_completion);
+
+			 if (difference >= 3){
+				"this".style.visibility = "visible";
+			 } else {
+				"this".style.visibility = "hidden";
+			 }
+
+			 return Tasks.find();
+	}
+
+});
+
+
+
+
+// https://atmospherejs.com/flyandi/reactive-countdown
+var countdown = new ReactiveCountdown(5);
+
+countdown.start(function() {
+
+ //  alert('c est fini');
+
+});
+
+Template.car.helpers({
+
+    getCountdown: function() {
+        return countdown.get();
+    }
+});
+
