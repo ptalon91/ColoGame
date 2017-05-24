@@ -4,7 +4,8 @@
 			{{#if check_if_admin}}
 				<button class="delete"><b>Supprimer</b></button>
 			{{/if}}
-   			<p><h4 class="notifText" id="notiftext"><b>Tâche</b>: {{name}}, <b>Points</b>: {{points}}</h4></p>
+			<!-- style is useful for hidden tasks with the check button -->
+   			<p><h4 class="notifText" style="visibility:{{#if checked}}hidden{{/if}};"><b>Tâche</b>: {{name}}, <b>Points</b>: {{points}}</h4></p>
    		</div>
 	</div>
 
