@@ -1,6 +1,7 @@
 .task{
 	border-radius: 5px;
 	background-color: rgba(150,209,255,0.4);
+	display: table-footer-group;
 }
 
 .task:hover{
