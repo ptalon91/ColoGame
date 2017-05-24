@@ -1,44 +1,74 @@
 .task{
+	width: 35%;
+	height: 70px;
+	margin-left: 15.5%;
+	margin-bottom: 15px;
+	text-align: center;
 	border-radius: 5px;
+	transition: 0.5s;
 	background-color: rgba(150,209,255,0.4);
-	display: table-footer-group;
+	display: inline-block;
+}
+.task:hover{
+	background-color: rgba(150,209,255,0.7);
+	box-shadow: 0px 0px 5px black;
+	transition: background-color 0.5s, box-shadow 0.5s;
 }
 
 .task:hover{
 	box-shadow: 0px 0px 5px black;
 	transition: background-color 0.5s, box-shadow 0.5s;
 }
-/*
+
 .notif{
 	width: 60%;
 	text-align: center;
 	margin-left: 15%;
 	border-radius: 5px;
 	background-color: rgba(150,209,255,0.4);
-}*/
+}
 .notif:hover{
+	background-color: rgba(150,209,255,0.7);
 	box-shadow: 0px 0px 5px black;
 	transition: background-color 0.5s, box-shadow 0.5s;
 }
 
-.jumbotron
-{
-		background-color : rgba(150,209,255,0.9);
+
+.jumbotron{
+	background-color : rgba(150,209,255,0.9);
     text-align: center;
 }
 
-/*le bouton pour supprimer les notif*/
-.delete{
-	float: right;
+
+/*le bouton pour ajouter une tache dans tasks*/
+#add_tache{
+	width: 60%;
 	text-align: center;
 	border-radius: 5px;
-	background-color: rgba(255, 128, 108, 0.6);
+	background-color: rgba(150,209,255,0.4);
+}
+#add_tache:hover{
+	box-shadow: 0px 0px 5px black;
+	transition: background-color 0.5s, box-shadow 0.5s;
+}
+.add_tacheText{
+	padding-top: 4px;
+}
+
+
+/*le bouton pour supprimer les notif*/
+.delete{
+	width: 10%;
+	height: 70px;
+	text-align: center;
+	border-radius: 5px;
+	background-color: rgba(255, 50, 50, 0.6);
 	color: white;
 	transition: background-color 0.5s, box-shadow 0.5s;
 }
 .delete:hover{
 	box-shadow: 0px 0px 5px black;
-	background-color: rgba(255, 88, 84, 0.7);
+	background-color: rgba(255, 50, 50, 0.9);
 	transition: background-color 0.5s, box-shadow 0.5s;
 }
 

@@ -1,18 +1,24 @@
 <template name="taskItem">
-	<div class="task">
-		 <label for="test" class="ckeck">
-			<input type="checkbox" checked="{{checked}}" >
-			 <span class="span1"></span>						<!--aussi compliqué pour le css-->
-			  Cette tâche a été faite.
-		 </label>
-		<div class="task text-center well well-sm col-sm-8" id="task_content">
-			{{#if check_if_admin}}
+
+	<div class="conteneurNotif">
+
+	 	<label for="test" class="check">
+			<input type="checkbox" checked="{{checked}}">
+			<span class="span1">Cette tâche a été faite.</span>						<!--aussi compliqué pour le css-->
+		</label>
+
+
+		<div class="task" id="task_content">
 				<!-- style is useful for hidden tasks with the check button -->
-				<button class="delete" style="visibility:{{#if checked}}hidden{{/if}};"><b>Supprimer</b></button>
-			{{/if}}
-				<!-- style is useful for hidden tasks with the check button -->
-   				<p><h4 class="notifText" style="visibility:{{#if checked}}hidden{{/if}};"><b>Tâche</b>: {{name}}, <b>Points</b>: {{points}}</h4></p>
+   				<h4 class="notifText" style="visibility:{{#if checked}}hidden{{/if}};"><b>Tâche</b>: {{name}} <br> <b>Points</b>: {{points}}</h4>
    		</div>
+
+
+		{{#if check_if_admin}}
+			<!-- style is useful for hidden tasks with the check button -->
+			<button class="delete" style="visibility:{{#if checked}}hidden{{/if}};"><b>Supprimer</b></button>
+		{{/if}}
+
 	</div>
 
 </template>
