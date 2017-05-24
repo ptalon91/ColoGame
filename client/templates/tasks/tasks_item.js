@@ -28,11 +28,10 @@ Template.taskItem.events({
 
 
 /*let countdown = new ReactiveCountdown(5);
-=======
+
 //compte a rebours
 /*
 let countdown = new ReactiveCountdown(5);
->>>>>>> origin/master
 countdown.start(function() {
    alert('c est fini');
 });

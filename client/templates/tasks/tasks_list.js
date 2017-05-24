@@ -11,47 +11,52 @@ Template.tasksList.helpers({
 // Event for the tasksList template.
 // Calls the method "incrementPoints" and "createNotif" defined on server side.
 // For current user, and for the clicked task's number of points.
-Template.tasksList.events({
+Template.taskItem.events({
 	'click #task_content': function(){
+
+		var checked = this.checked;
 		
-		// Parameters...
-		let task_points = this.points;
-		let task_descr = this.descr;
-		let box_message = "Vous avez vraiment " + task_descr + " ?";
+		if(checked != true){
+			// Parameters...
+			let task_points = this.points;
+			let task_descr = this.descr;
+			let box_message = "Vous avez vraiment " + task_descr + " ?";
 
-		// Confirmation box when clicking a task. "ok" is true if the user clicked on "ok", false otherwise
-		new Confirmation({
-		  message: box_message,
-		  title: "Confirmation",
-		  cancelText: "Annuler",
-		  okText: "Oui",
-		  success: true, // whether the button should be green or red
-		  focus: "cancel" // which button to autofocus, "cancel" (default) or "ok", or "none"
-		}, function (ok) {
+			// Confirmation box when clicking a task. "ok" is true if the user clicked on "ok", false otherwise
+			new Confirmation({
+			  message: box_message,
+			  title: "Confirmation",
+			  cancelText: "Non",
+			  okText: "Oui",
+			  success: true, // whether the button should be green or red
+			  focus: "cancel" // which button to autofocus, "cancel" (default) or "ok", or "none"
+			}, function (ok) {
 
-			if (ok == true){
-				// Call method on server for incrementing user's points.
-				Meteor.call(
-					'incrementPoints',
-					Meteor.userId(),
-					task_points
-				);
+				if (ok == true){
+					// Call method on server for incrementing user's points.
+					Meteor.call(
+						'incrementPoints',
+						Meteor.userId(),
+						task_points
+					);
 
-				// Call method on server to create a notification.
-				Meteor.call(
-					'createNotif',
-					Meteor.user().colocName,
-					Meteor.user().username,
-					Meteor.user().points,
-					task_points,
-					task_descr
-				);
-				
-				// After confirmation, redirect to coloc page.
-				Router.go('coloc');
-			}
-		});
+					// Call method on server to create a notification.
+					Meteor.call(
+						'createNotif',
+						Meteor.user().colocName,
+						Meteor.user().username,
+						Meteor.user().points,
+						task_points,
+						task_descr
+					);
+					
+					// After confirmation, redirect to coloc page.
+					Router.go('coloc');
+				}
+			});
+		} else{alert('Cette tâche a déjà été effectuée, essayez ultérieurement.')};
 	},
+
 
 	//créer une nouvelle tache
 	'click #add_tache': function(){
