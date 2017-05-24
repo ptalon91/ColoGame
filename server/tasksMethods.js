@@ -27,7 +27,8 @@ Meteor.methods({
 			service: true,
 			pending: false,
 			createdAt: new Date(),
-			checked: false
+			checked: false,
+			tasksDoneDate: null
 		})
 	},
 
