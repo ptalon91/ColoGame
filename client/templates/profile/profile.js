@@ -1,6 +1,5 @@
 Template.profile.helpers({
-	notifs: function() {
-		
+	notifs: function(){
 			return Notifs.find({authorID: Meteor.userId()}, {sort: {createdAt: -1}, limit: 15});	
 	},
 
