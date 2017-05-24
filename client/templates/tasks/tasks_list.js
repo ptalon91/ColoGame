@@ -90,54 +90,6 @@ Template.tasksList.events({
 
 });
 
-//faire disparaître les taches effectuées sans compteur
-Template.taskItem.events({
-	'click #checkbutton': function(){
-			
-
-			 /*let date_completion = Tasks.find(this._id, this.checked).fetch()[0].tasksDoneDate;
-			 let maintenant = new Date();
-			 let difference = (maintenant.getTime() - date_completion.getTime())/ (1000 * 3600 * 24);// différence entre date de complétion et maintenant >= 3 jours
-			 console.log(date_completion);
-
-			 if (difference >= 3){
-				"this".style.visibility = "visible";
-			 } else {
-				"this".style.visibility = "hidden";
-			 }
-
-			 return Tasks.find();*/
-
-			 var text = document.getElementById('notiftext');
-			 var text2 = this._id;
-			 console.log(text2);
-
-			 //var text2 = Tasks.find(_id);
-			 
-			 
-
-			//  if (this.checked === true){
-			//	text.style.visibility = "visible";
-			 //} else {
-			//	text.style.visibility = "hidden";
-			 //}
-	}
-
-});
-
-
-
-Template.taskItem.helpers({
-    tasks: function() {
-        // On récupère la première ligne de la collection Counter
-        return console.log(Tasks.findOne().value);
-    }
-});
-
-
-
-
-
 /* https://atmospherejs.com/flyandi/reactive-countdown
 var countdown = new ReactiveCountdown(5);
 
