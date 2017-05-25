@@ -43,6 +43,7 @@ Template.tasksList.events({
 					// Call method on server to create a notification.
 					Meteor.call(
 						'createNotif',
+						Meteor.userId(),
 						Meteor.user().colocName,
 						Meteor.user().username,
 						Meteor.user().points,
@@ -63,9 +64,9 @@ Template.tasksList.events({
 	    var user_task_name = prompt('Entrez le nom de la tâche');
 	    
 		if(user_task_name != null && user_task_name.trim() != '') {			//ne peut pas être nulle
-			var user_task_points = prompt('Entrez le nombre de points');
+			var user_task_points = Number(prompt('Entrez le nombre de points'));
 
-			if(user_task_points != null && user_task_points.trim() != ''){	//ne peut pas être nulle
+			if(user_task_points != null){	//ne peut pas être nulle
 				Meteor.call(
 					'createTask',
 					Meteor.user().colocName,

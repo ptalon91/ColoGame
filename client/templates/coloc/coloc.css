@@ -5,7 +5,7 @@ main{
 .task{
 	width: 35%;
 	height: 70px;
-	margin-left: 20.5%;
+	margin-left: 5.5%;
 	margin-bottom: 15px;
 	text-align: center;
 	border-radius: 5px;
@@ -48,7 +48,7 @@ main{
 
 /*le bouton pour ajouter une tache dans tasks*/
 #add_tache{
-	width: 60%;
+	width: 70%;
 	height: 30px;
 	text-align: center;
 	margin-bottom: 15px;
@@ -65,6 +65,12 @@ main{
 }
 
 
+/*le bouton check*/
+.ckeck{
+	margin-left: 15%;
+}
+
+
 /*le bouton pour supprimer les notif*/
 .delete{
 	width: 10%;
@@ -72,7 +78,7 @@ main{
 	text-align: center;
 	float: right;
 	margin-top: 14px;
-	margin-right: 325px;
+	margin-right: 15%;
 	border-radius: 7px;
 	background-color: rgba(255, 50, 50, 0.6);
 	color: white;
