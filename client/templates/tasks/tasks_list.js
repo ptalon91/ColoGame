@@ -53,6 +53,13 @@ Template.tasksList.events({
 					
 					// After confirmation, redirect to coloc page.
 					Router.go('coloc');
+
+					Meteor.methods({
+					updateTask(task_id, task_checked){
+					Tasks.update(task_id, {$set:{checked: true}});
+					}
+					});
+					alert("N'oubliez pas d'aller cocher la case \"Cette tâche a été faite.\"")
 				}
 			});
 		} else{alert('Cette tâche a déjà été effectuée, essayez ultérieurement.')};

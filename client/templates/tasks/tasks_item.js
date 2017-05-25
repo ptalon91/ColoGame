@@ -6,7 +6,7 @@ Template.taskItem.helpers({
 Template.taskItem.events({
 
   // Call update task method (located in the server) when user clicks on the check box.
-	'click .ckeck': function(){
+	'click .check': function(){
     Meteor.call(
       'updateTask',
       this._id,
