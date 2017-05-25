@@ -15,7 +15,9 @@
 			{{else}}
 				<div class="col-sm-3">
 					<div class="row">
-						<img class="img-responsive img-rounded" src="/data/profile_pic.png" style="margin-left: -1em;"/>
+						<a href="/profile">
+							<img class="img-responsive img-rounded" src="/data/profile_pic.png" style="margin-left: -1em;"/>
+						</a>
 						<ul class="list-unstyled">
 			   				<!-- Returns username and points fields of the current user and include into HTML. -->
 			   				<li><h3>{{currentUser.username}}</h3></li>
@@ -25,7 +27,7 @@
 
 				   	<div class="row">
 				   		<div style="padding-top: 2%">
-				   			<h4>Scores et classement</h4>
+				   			<h4>Scores et classement ⭐️</h4>
 				   			<!--Returns users list template-->
 						 	{{>usersList}}
 				   		</div>

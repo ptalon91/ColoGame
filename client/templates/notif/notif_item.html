@@ -1,6 +1,7 @@
 <template name="notifItem">
 		<!-- Returns name and points field of the current task and include into HTML. -->
-		<div class="notif well well-sm col-sm-8 text-center pull-right ">
+		<div class="notif">
    			<p><h4>{{text}}</h4></p>
+   			<p class="date">{{createdAt}}</p> <!-- pour savoir quand refaire la tache -->
    		</div>
 </template>
