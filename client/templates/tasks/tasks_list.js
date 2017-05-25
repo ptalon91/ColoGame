@@ -11,7 +11,7 @@ Template.tasksList.helpers({
 // Event for the tasksList template.
 // Calls the method "incrementPoints" and "createNotif" defined on server side.
 // For current user, and for the clicked task's number of points.
-Template.taskItem.events({
+Template.tasksList.events({
 	'click #task_content': function(){
 
 		var checked = this.checked;
