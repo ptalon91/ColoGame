@@ -51,11 +51,6 @@ Template.tasksList.events({
 						task_descr
 					);
 					
-					Meteor.call(
-						'updateTask',
-						this._id,
-						checked
-					);
 					alert("N'oubliez pas d'aller cocher la case \"Cette tâche a été faite.\"");
 
 					// After confirmation, redirect to coloc page.
@@ -88,15 +83,7 @@ Template.tasksList.events({
 		} else{
  			alert('Aucune information');
  		  }
- 	},
-
-
-	'click .delete': function(){
-		Meteor.call(
-			'removeTask',
-			this._id
-		);
-	}
+ 	}
 
 });
 
