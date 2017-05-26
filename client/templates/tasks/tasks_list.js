@@ -51,15 +51,15 @@ Template.tasksList.events({
 						task_descr
 					);
 					
-					// After confirmation, redirect to coloc page.
-					Router.go('coloc');
+					Meteor.call(
+						'updateTask',
+						this._id,
+						checked
+					);
+					alert("N'oubliez pas d'aller cocher la case \"Cette tâche a été faite.\"");
 
-					Meteor.methods({
-					updateTask(task_id, task_checked){
-					Tasks.update(task_id, {$set:{checked: true}});
-					}
-					});
-					alert("N'oubliez pas d'aller cocher la case \"Cette tâche a été faite.\"")
+					// After confirmation, redirect to coloc page.
+					//Router.go('coloc');
 				}
 			});
 		} else{alert('Cette tâche a déjà été effectuée, essayez ultérieurement.')};
@@ -92,7 +92,10 @@ Template.tasksList.events({
 
 
 	'click .delete': function(){
-		Tasks.remove(this._id);
+		Meteor.call(
+			'removeTask',
+			this._id
+		);
 	}
 
 });
