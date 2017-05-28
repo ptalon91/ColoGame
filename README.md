@@ -36,7 +36,7 @@ ColoGame a été développé avec le framework de développement web en Javascri
   - bootstrap (mise en page css)
   - underscore (collection de helpers)
 
-Certaines libraries et modules utilisées pour le développement sont parfois soumises à un copyright par leurs auteurs respectifs.
+Certaines libraries et modules utilisés pour le développement sont parfois soumis à un copyright par leurs auteurs respectifs.
 
 Copyright © 2017 - l'équipe de développement de Cologame
 
