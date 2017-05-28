@@ -2,11 +2,11 @@
   <nav class="container navbar navbar-default" role="navigation">
     <div class="navbar-header">
       <!-- Clicking on the title brings back to home page -->
-      <a class="navbar-brand" href="{{pathFor 'homePage'}}">ColoGame - Manage your flatshare with fun</a>
+      <a class="navbar-brand" href="{{pathFor 'homePage'}}">ColoGame - Accueil</a>
     </div>
 
     <div class="collapse navbar-collapse" id="navigation">
-      
+
       <!-- If user is connected show profile picture. Not responsive yet. -->
       {{#if currentUser}}
         <ul class="nav navbar-nav navbar-right">
@@ -22,17 +22,15 @@
       {{#if currentUser}}
         {{#if check_if_coloc}}
           <ul class="nav navbar-nav navbar-right">
-              <a class="navbar-brand" href="{{pathFor 'coloc'}}"><small>My Coloc</small></a>
+              <a class="navbar-brand" href="{{pathFor 'coloc'}}"><small>Ma coloc</small></a>
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
-              <a class="navbar-brand" href="{{pathFor 'tasksList'}}"><small>Tasks</small></a>
+              <a class="navbar-brand" href="{{pathFor 'tasksList'}}"><small>Tâches</small></a>
           </ul>
         {{/if}}
       {{/if}}
-      
-    </div>  
+
+    </div>
   </nav>
 </template>
-
-	

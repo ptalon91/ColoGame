@@ -77,8 +77,8 @@ if (Tasks.find().count() === 0) {
   Tasks.insert({
     author: 'admin',
     coloc: 'global',
-    name: 'préparer à mangé pour tout le monde',
-    descr: 'préparé à mangé pour tout le monde',
+    name: 'préparer à manger pour tout le monde',
+    descr: 'préparé à manger pour tout le monde',
     points: 300,
     service: false,
     pending: false,

@@ -22,15 +22,10 @@
 	margin-left: 41.2%;
 	margin-bottom: 15px;
 	padding-top: 13px;
-  	border-radius: 5px;
+  border-radius: 5px;
 	transition: 0.5s;
 	background-color: rgba(150,209,255,0.4);
 }
-/*.notif:hover{
-	background-color: rgba(150,209,255,0.7);
-	box-shadow: 0px 0px 5px black;
-	transition: background-color 0.5s, box-shadow 0.5s;
-}*/
 
 /*date de la notif*/
 .date{
@@ -38,31 +33,34 @@
 	color: white;
 	float: right;
 	padding-top: 5px;
+	padding-right: 5px;
 }
 
-
 .jumbotron{
+	height: 80%;
 	color: white;
+	border-radius: 10px;
+	background-color : rgba(150,209,255,1);
+  text-align: center;
+}
+
+#jumb_task{
 	width: 95%;
 	margin-left: auto;
 	margin-right: auto;
-	border-radius: 10px;
-	background-color : rgba(150,209,255,1);
-    text-align: center;
 }
-
 
 /*le bouton pour ajouter une tache dans tasks*/
 #add_tache{
-	width: 70%;
-	height: 30px;
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
+	width: 35%;
+	height: 50px;
+	margin-left: 34.2%;
 	margin-bottom: 15px;
-	padding-bottom: 0px;
+	text-align: center;
 	border-radius: 5px;
-	background-color: rgba(150,209,255,1);
+	transition: 0.5s;
+	background-color: rgba(150,209,255,0.8);
+	display: inline-block;
 }
 #add_tache:hover{
 	background-color: rgba(150,209,255,1);
@@ -73,7 +71,6 @@
 	color: white;
 	padding-top: 4px;
 }
-
 
 /*le bouton check*/
 .check{
@@ -100,7 +97,6 @@
 	transition: background-color 0.5s, box-shadow 0.5s;
 }
 
-
 /*les taches à faire sur mon profile*/
 #afaire{
 	background-color: rgba(150,209,255,0.4);
@@ -110,7 +106,6 @@
 	margin-top: 15px;
 	background-color: rgba(255, 88, 84, 0.6);
 }
-
 
 /*barre de navigation + éléments*/
 .navbar{
@@ -143,7 +138,6 @@
 	border-radius: 10px;
 	transition: 0.5s;
 }
-
 
 /*nom et nbr de points*/
 .list-unstyled{

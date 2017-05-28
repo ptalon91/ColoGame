@@ -2,26 +2,21 @@
 <!--	<div class="tasks container">-->
 
 		{{#if currentUser}}
-
 			{{#if check_if_coloc}}
-
 				{{>createColoc}}
 
 			{{else}}
-				<div class="jumbotron">
-					<h2>Quelle tâche venez-vous d'effectuer ?</h2>
+				<div class="jumbotron" id="jumb_task">
+					<h2>Quelle tâche avez-vous effectuée ?</h2>
 				</div>
-				<div class="add_tache" id="add_tache">
-					<h4 class="add_tacheText">Ajouter une nouvelle tâche</h4>
-				</div>
-		<!--For each tasks returned by the helper, use template taskItem.-->
+				<!--For each tasks returned by the helper, use template taskItem.-->
 				{{#each tasks}}
 					{{> taskItem}}
-				{{/each}}
 
+				{{/each}}
 			{{/if}}
 		{{/if}}
-<!--	</div>  -->
-
-
+		<div class="add_tache" id="add_tache">
+			<h4 class="add_tacheText">Ajouter une nouvelle tâche</h4>
+		</div>
 </template>

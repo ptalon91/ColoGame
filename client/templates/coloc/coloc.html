@@ -1,18 +1,21 @@
 <template name="coloc">
 	<div class="container">
-		
+
 		<!-- Profile image is not reactive yet. It should later be uploaded by the user and be loaded after login.-->
 		<!-- #if currentUser return the current user, allowing to get his own data. -->
 		{{#if currentUser}}
-			
+
 			<!--#if check_if_coloc returns the current user's colocName field (see helper). If it's null, show the following message-->
 			{{#if check_if_coloc}}
-				
+
 				<!--Returns coloc creation template.-->
 				{{>createColoc}}
 
 			<!-- Else show his own data and data of users with same colocName.-->
 			{{else}}
+			<div class="jumbotron">
+				<h2>Les tâches accomplies</h2>
+			</div>
 				<div class="col-sm-3">
 					<div class="row">
 						<a href="/profile">
@@ -40,6 +43,6 @@
 			{{/if}}
 
 		{{/if}}
-		
+
 	</div>
 </template>
