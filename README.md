@@ -1,11 +1,11 @@
 # ColoGame - Readme
-*Leonardo Cavaliere - David Fluehmann - Rodolfo Miranda - Patrick Talon - Nicolas Vallotton*  
+*ColoGame v 1.0*
 
-Projet de Programmation pour Internet II  
-Faculté des Lettres - Université de Lausanne  
-Semestre de Printemps 2017
+*Leonardo Cavaliere - David Fluehmann - Patrick Talon - Nicolas Vallotton*  
 
-*ColoGame v 0.1*
+Projet dans le cadre du cours : Programmation pour Internet II de Isaac Pante
+Faculté des Lettres - Université de Lausanne - Mars à Mai 2017
+Github : https://github.com/ptalon91/ColoGame/
 
 Introduction
 ------------
@@ -13,9 +13,20 @@ ColocGame est une application qui rend les tâches ménagères en colocation plu
 
 Le public cible d'une telle application sont des personnes à priori jeunes et vivant en colocation qui doivent se répartir les corvées ménagères. ColoGame se veut ludique car le but est de faire avant ses colocataires les tâches les moins pénibles pour laisser les plus paresseux se voir attribuer les tâches les plus déagréables tout en participant à la vie communautaire du ménage. Grâce à l'application, les colocataires se responsabilisent et cela doit normalement éviter le laxisme de certain, tout réduisant les conflits liés à l'attribution des tâches.
 
-Technologies
+Marche à suivre
 ------------
-  ColoGame a été développé avec le framework de développement web en Javascript *Meteor* dans sa version 1.4.4.  
+Ci dessous les différentes étapes d'une utilisation de base de ColoGame :
+
+L'utilisateur arrive sur la page d'accueil et peut se logger ou créer un nouvel utilisateur avec un mot de passe.
+S'il n'est pas encore affilié à une colocation (groupe d'utilisateurs), il arrivera sur une page pour rejoindre une “coloc” ou créer une “coloc”.
+Sur la page principale, l'utilisateur peut voir le classement de sa “coloc” lié aux nombres de points de tous ses colocataires, ainsi que les notifications des dernières tâches effectuées par lui ou ses colocataires et le nombre de points attribués.
+Le bouton “Tâches” permet de d'ouvrir la page où l'utilisateur va pouvoir sélectionner une tâche et confirmer qu'elle a bien été exécutée pour recevoir les points correspondants.
+
+Licence
+------------
+Ce programme est un logiciel gratuit.
+
+ColoGame a été développé avec le framework de développement web en Javascript *Meteor* dans sa version 1.4.4.  
 
   Les principaux modules Meteor utilisés dans ce projet sont :
   - mongol/minimongo (gestion des bases de données)
@@ -24,37 +35,13 @@ Technologies
   - accounts (création d'utilisateur avec mot de passe)
   - bootstrap (mise en page css)
   - underscore (collection de helpers)
-  - flyandi (compte à rebours)
 
-Méthodologie
-----------
-  **Ci dessous les différentes étapes d'une utilisation de base de CocoGame**
+Certaines libraries et modules utilisées pour le développement sont parfois soumises à un copyright par leurs auteurs respectifs.
 
-1. L'utilisateur arrive sur la page d'accueil et peut se loguer ou créer un nouvel utilisateur avec un mot de passe.
-2. S'il n'est pas encore affilié à une colocation (groupe d'utilisateurs), il arrivera sur une page pour rejoindre une 'coloc' ou créer une 'coloc'.
-3. Sur la page principale, l'utilisateur peut voir le classement de sa 'coloc' lié aux nombres de points de tous ses colocataires, ainsi que les notifications des dernières tâches effectuées par lui ou ses colocataires et le nombre de points attribués.
-4. Le boutton 'Tasks' permet de d'ouvrir la page où l'utilisateur va pouvoir sélectionner une tâche et confirmer qu'elle a bien été exécutée pour recevoir les points correspondants.
-5. Il est possible de créer des tâches et de leur assigner un temps limite à leur exécution, les utilisateurs avec le moins de points vont se voir attribuer les tâches qu'aucun autre colocataire n'a voulu accomplir.
-
-Discussion
-------------------------
-*Meteor* est un framework de développement web très puissant. Il permet le développement avec mise à jour visualisation en temps réel. L'implémentation de modules ou 'packages', ainsi que leur documentation disponible sur le web, offre de nombreuses possibilités et diminue le temps de développement d'une application comme *ColoGame*. Cependant, le code est peut être moins intuitif et nécessite un temps d'adaptation préalable relativement conséquent, surtout si plusieurs modules s'imbriquent entre eux.
-
-*Github* a été utilisé pour la gestion du développement de l'application, cet outil permet de sauvegarder les différentes phases du projet et de développer en parallèle certains segments du projet en plusieurs 'branches' pour ensuite fusionner ces dernières sur une 'branche' principale. Ce gestionnaire de développement est certes très pratique avoir un backup de du projet, mais nécessite aussi une bonne connaissance des possibilités et commandes existantes lors d'une utilisation plus poussée.
-
-Améliorations
-------------------------
+Copyright © 2017 - l'équipe de développement de Cologame
 
 
 
-Conclusion
-----------
-  ce qui a été accompli....
-  
-  
-  
-  Un aspect que l'on aurait voulu développer sur le site de Collocgame est le fait d'attribuer des gages aux personnes qui auraient été en retard avec les tâches...
-  
-  
+
 
 ---------
