@@ -20,6 +20,7 @@ Template.tasksList.events({
 			// Parameters...
 			let task_points = this.points;
 			let task_descr = this.descr;
+			let task_id = this._id;
 			let box_message = "Vous avez vraiment " + task_descr + " ?";
 
 			// Confirmation box when clicking a task. "ok" is true if the user clicked on "ok", false otherwise
@@ -51,10 +52,15 @@ Template.tasksList.events({
 						task_descr
 					);
 					
-					alert("N'oubliez pas d'aller cocher la case \"Cette tâche a été faite.\"");
+					// Call method on server to update task's "checked" field.
+					Meteor.call(
+				      'updateTask',
+				      task_id
+				    );
+					//alert("N'oubliez pas d'aller cocher la case \"Cette tâche a été faite.\"");
 
 					// After confirmation, redirect to coloc page.
-					//Router.go('coloc');
+					Router.go('coloc');
 				}
 			});
 		} else{alert('Cette tâche a déjà été effectuée, essayez ultérieurement.')};
@@ -86,20 +92,3 @@ Template.tasksList.events({
  	}
 
 });
-
-/* https://atmospherejs.com/flyandi/reactive-countdown
-var countdown = new ReactiveCountdown(5);
-
-countdown.start(function() {
-
- //  alert('c est fini');
-
-});
-
-Template.car.helpers({
-
-    getCountdown: function() {
-        return countdown.get();
-    }
-});*/
-

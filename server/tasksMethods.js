@@ -17,6 +17,15 @@ Meteor.methods({
 		})
 	},
 
+	// Creates a notification when user joins the coloc.
+	createJoinNotif(current_username, current_colocName) {
+		Notifs.insert({
+			text: current_username + " a rejoint la Coloc " + current_colocName + ". Bienvenue, " + current_username + "!" ,
+			colocName: current_colocName,
+			createdAt: new Date()
+		})
+	},
+
 	// Creates a task when user clicks on the add task button.
 	createTask(current_colocName, current_username, user_task_name, user_task_points){
 		Tasks.insert({
@@ -37,7 +46,7 @@ Meteor.methods({
 		Tasks.remove(task_id);
 	},
 
-	// Update task.
+	// Update task. Set "checked" field to tru if it was false, or to false if it was true.
 	updateTask(task_id, task_checked){
 		Tasks.update(task_id, {$set:{checked: !task_checked}});
 	}

@@ -7,19 +7,24 @@ Template.taskItem.events({
 
   // Call update task method (located in the server) when user clicks on the check box.
 	'click .check': function(){
+    
+    let task_points = this.points;
+    let task_descr = this.descr;
+    let task_id = this._id;
+    var checked = this.checked;
+
     Meteor.call(
       'updateTask',
-      this._id,
-      this.checked
+      task_id,
+      checked
     );
 	},
 
   // Call remove task method (located in the sevrer) when user clicks on "supprimer".
 	'click .delete': function(){
-    Meteor.call( // copie de la méthode à la ligne 33 pour qu'elle efface quand même
-      'removeTask',
-      this._id
-    );
+    
+    let task_id = this._id;
+
     let box_message = "Voulez-vous vraiment supprimer cette tâche ?";
     new Confirmation({
       message: box_message,
@@ -30,29 +35,11 @@ Template.taskItem.events({
       focus: "cancel" // which button to autofocus, "cancel" (default) or "ok", or "none"
     }, function (ok) {
       if (ok == true){
-        console.log("df"); // je ne comprends pas pourquoi le méthode ne se lance pas...
         Meteor.call(
           'removeTask',
-          this._id
+          task_id
         );
       }
 	   })
   }
 });
-
-
-
-/*let countdown = new ReactiveCountdown(5);
-
-//compte a rebours
-/*
-let countdown = new ReactiveCountdown(5);
-countdown.start(function() {
-   alert('c est fini');
-});
-
-Template.car.helpers({
-    getCountdown: function() {
-        return countdown.get();
-    }
-});*/
