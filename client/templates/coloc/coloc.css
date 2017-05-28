@@ -47,7 +47,7 @@
 	margin-left: auto;
 	margin-right: auto;
 	border-radius: 10px;
-	background-color : rgba(150,209,255,0.9);
+	background-color : rgba(150,209,255,1);
     text-align: center;
 }
 
@@ -62,7 +62,7 @@
 	margin-bottom: 15px;
 	padding-bottom: 0px;
 	border-radius: 5px;
-	background-color: rgba(150,209,255,0.7);
+	background-color: rgba(150,209,255,1);
 }
 #add_tache:hover{
 	background-color: rgba(150,209,255,1);

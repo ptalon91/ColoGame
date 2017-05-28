@@ -16,13 +16,28 @@ Template.taskItem.events({
 
   // Call remove task method (located in the sevrer) when user clicks on "supprimer".
 	'click .delete': function(){
-    Meteor.call(
+    Meteor.call( // copie de la méthode à la ligne 33 pour qu'elle efface quand même
       'removeTask',
       this._id
     );
-	},
-
-	
+    let box_message = "Voulez-vous vraiment supprimer cette tâche ?";
+    new Confirmation({
+      message: box_message,
+      title: "Confirmation",
+      cancelText: "Non",
+      okText: "Oui",
+      success: true, // whether the button should be green or red
+      focus: "cancel" // which button to autofocus, "cancel" (default) or "ok", or "none"
+    }, function (ok) {
+      if (ok == true){
+        console.log("df"); // je ne comprends pas pourquoi le méthode ne se lance pas...
+        Meteor.call(
+          'removeTask',
+          this._id
+        );
+      }
+	   })
+  }
 });
 
 
