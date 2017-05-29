@@ -1,12 +1,13 @@
 <template name="tasksList">
 <!--	<div class="tasks container">-->
-
+	<div class="container">
 		{{#if currentUser}}
 			{{#if check_if_coloc}}
 				{{>createColoc}}
 
 			{{else}}
-				<div class="jumbotron" id="jumb_task">
+
+				<div class="jumbotron">
 					<h2>Quelle tâche avez-vous effectuée ?</h2>
 				</div>
 				<!--For each tasks returned by the helper, use template taskItem.-->
@@ -19,4 +20,5 @@
 		<div class="add_tache" id="add_tache">
 			<h4 class="add_tacheText">Ajouter une nouvelle tâche</h4>
 		</div>
+	</div>
 </template>
