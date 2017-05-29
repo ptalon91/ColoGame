@@ -24,7 +24,7 @@ Le bouton “Tâches” permet de d'ouvrir la page où l'utilisateur va pouvoir 
 
 Base de données
 ------------
-La base de données basée sur Mongol est construite selon 3 grandes tables :
+La base de données basée sur MongoDB est construite selon 3 grandes tables :
 Une pour les users où l’on retrouve des champs concernant l’affiliation à une “coloc”, le nombre de points de l’utilisateur et son username.
 Une table “notifs” qui permet d’afficher les notifications de toutes la coloc ou d’un certain utilisateur. On y retrouve des champs liés à la tâche effectuée, la date , l’utilisateur, sa coloc et un texte pré-conçu qui est directement affiché dans les zones des notifications. À noter que les notifications d’une coloc ne va s’afficher que si l’utilisateur fait bien parti de cette colocation.
 Une table concernant les tâches (“tasks”) où l’on peut trouver des champs liés à l’utilisateur ayant créé la tâche, son appartenance à une coloc, la description de la tâche pour les notifications, les points de cette tâche, si la tâche est un service ou un gage (pas encore implémenté dans l’application), si la tâche est en “pending” (donc  a été faite et en attente devoir la refaire) et si l’information si la tâche a été faite pour l’afficher visuellement.
