@@ -20,6 +20,7 @@ Template.tasksList.events({
 			// Parameters...
 			let task_points = this.points;
 			let task_descr = this.descr;
+			let task_name = this.name;
 			let task_id = this._id;
 			let box_message = "Vous avez vraiment " + task_descr + " ?";
 
@@ -49,7 +50,8 @@ Template.tasksList.events({
 						Meteor.user().username,
 						Meteor.user().points,
 						task_points,
-						task_descr
+						task_descr,
+						task_name
 					);
 					
 					// Call method on server to update task's "checked" field.
