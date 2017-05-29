@@ -14,7 +14,7 @@ Template.tasksList.helpers({
 Template.tasksList.events({
 	'click #task_content': function(){
 
-		var checked = this.checked;
+		let checked = this.checked;
 		
 		if(checked != true){
 			// Parameters...
@@ -71,10 +71,10 @@ Template.tasksList.events({
 
 	//créer une nouvelle tache
 	'click #add_tache': function(){
-	    var user_task_name = prompt('Entrez le nom de la tâche');
+	    let user_task_name = prompt('Entrez le nom de la tâche');
 	    
 		if(user_task_name != null && user_task_name.trim() != '') {			//ne peut pas être nulle
-			var user_task_points = Number(prompt('Entrez le nombre de points'));
+			let user_task_points = Number(prompt('Entrez le nombre de points'));
 
 			if(user_task_points != null){	//ne peut pas être nulle
 				Meteor.call(

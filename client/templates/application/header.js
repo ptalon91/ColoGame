@@ -14,7 +14,7 @@ Template.header.events({
 });
 
 // Redirect to coloc page after login.
-var requireLogin = function() {
+let requireLogin = function() {
     if (! Meteor.user()) {
       if (Meteor.loggingIn()) {
         Router.go('coloc');

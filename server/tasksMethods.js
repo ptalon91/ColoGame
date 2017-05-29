@@ -15,7 +15,7 @@ Meteor.methods({
     	task_points,
     	task_descr,
     	task_name
-    ) {
+    ){
 		
 		// List of different strings to create notifs.
     	let text_list = [
@@ -49,7 +49,12 @@ Meteor.methods({
 	},
 
 	// Creates a task when user clicks on the add task button.
-	createTask(current_colocName, current_username, user_task_name, user_task_points){
+	createTask(
+		current_colocName,
+		current_username,
+		user_task_name,
+		user_task_points
+	){
 		Tasks.insert({
 			coloc: current_colocName,
 			author: current_username,

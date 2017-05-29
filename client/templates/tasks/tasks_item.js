@@ -11,7 +11,7 @@ Template.taskItem.events({
     let task_points = this.points;
     let task_descr = this.descr;
     let task_id = this._id;
-    var checked = this.checked;
+    let checked = this.checked;
 
     Meteor.call(
       'updateTask',
