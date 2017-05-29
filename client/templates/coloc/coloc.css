@@ -45,16 +45,16 @@
 }
 
 #jumb_task{
-	width: 95%;
+	width: 79%;
 	margin-left: auto;
 	margin-right: auto;
 }
 
 /*le bouton pour ajouter une tache dans tasks*/
 #add_tache{
-	width: 35%;
+	width: 71%;
 	height: 50px;
-	margin-left: 34.2%;
+	margin-left: 15%;
 	margin-bottom: 15px;
 	text-align: center;
 	border-radius: 5px;
