@@ -1,7 +1,7 @@
 // Events when user enters a name for the coloc.
 Template.createColoc.events({
 	'keypress .createColoc': function(evt){
-		
+
 		let contenu = document.getElementById('colocName').value;
 		let box_message = "Voulez-vous vraiment créer ou rejoindre la coloc " + contenu + " ?";
 
@@ -18,7 +18,7 @@ Template.createColoc.events({
 				focus: "cancel"
 			}, function (ok) {
 					if (ok == true){
-						
+
 						// Call method on server for creating new coloc
 		    			Meteor.call(
 			      			'createColoc',
