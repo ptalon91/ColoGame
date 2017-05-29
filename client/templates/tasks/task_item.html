@@ -4,7 +4,7 @@
 			<input type="checkbox" checked="{{checked}}">
 			<span class="span1">Cette tâche a été faite.</span>						<!--aussi compliqué pour le css-->
 		</label>
-		<div class="task" id="task_content" style="background-color:{{#if checked}}rgba(50, 220, 120, 0.5){{/if}};">
+		<div class="task" id="task_content" style="background-color:{{#if checked}}rgba(50, 250, 120, 0.3){{/if}};">
 				<!-- style is useful for hidden tasks with the check button -->
    				<h4 class="notifText"><b>Tâche</b>: {{name}} <br> <b>Points</b>: {{points}}</h4>
    		</div>
@@ -14,7 +14,6 @@
 		{{/if}}
 	</div>
 </template>
-
 <!--
 <template name="car">
  	<big>{{getCountdown}}</big> seconds left!
