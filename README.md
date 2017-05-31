@@ -1,5 +1,5 @@
 # ColoGame - Readme
-*ColoGame v 0.2*
+*ColoGame v.1.0*
 
 *Leonardo Cavaliere - David Fluehmann - Patrick Talon - Nicolas Vallotton*  
 
